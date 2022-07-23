@@ -1,0 +1,256 @@
+0000	ef bb bf 3c 21 44 4f 43  54 59 50 45 20 68 74 6d   ...<!DOCTYPE htm
+0010	6c 3e 0d 0a 3c 21 2d 2d  20 43 6f 70 79 72 69 67   l>..<!-- Copyrig
+0020	68 74 28 63 29 20 4c 65  73 74 65 72 20 4a 2e 20   ht(c) Lester J. 
+0030	43 6c 61 72 6b 20 32 30  32 32 20 2d 20 41 6c 6c   Clark 2022 - All
+0040	20 52 69 67 68 74 73 20  52 65 73 65 72 76 65 64    Rights Reserved
+0050	20 2d 2d 3e 0d 0a 3c 21  2d 2d 20 4c 4a 43 44 69    -->..<!-- LJCDi
+0060	72 65 63 74 69 76 65 2e  68 74 6d 6c 20 2d 2d 3e   rective.html -->
+0070	0d 0a 3c 68 74 6d 6c 20  6c 61 6e 67 3d 22 65 6e   ..<html lang="en
+0080	22 20 78 6d 6c 6e 73 3d  22 68 74 74 70 3a 2f 2f   " xmlns="http://
+0090	77 77 77 2e 77 33 2e 6f  72 67 2f 31 39 39 39 2f   www.w3.org/1999/
+00a0	78 68 74 6d 6c 22 3e 0d  0a 3c 68 65 61 64 3e 0d   xhtml">..<head>.
+00b0	0a 09 3c 74 69 74 6c 65  3e 4c 4a 43 44 69 72 65   ..<title>LJCDire
+00c0	63 74 69 76 65 3c 2f 74  69 74 6c 65 3e 0d 0a 09   ctive</title>...
+00d0	3c 6d 65 74 61 20 63 68  61 72 73 65 74 3d 27 75   <meta charset='u
+00e0	74 66 2d 38 27 20 2f 3e  0d 0a 09 3c 6d 65 74 61   tf-8' />...<meta
+00f0	20 6e 61 6d 65 3d 22 61  75 74 68 6f 72 22 20 63    name="author" c
+0100	6f 6e 74 65 6e 74 3d 22  4c 65 73 74 65 72 20 4a   ontent="Lester J
+0110	2e 20 43 6c 61 72 6b 22  20 2f 3e 0d 0a 09 3c 6d   . Clark" />...<m
+0120	65 74 61 20 6e 61 6d 65  3d 22 6b 65 79 77 6f 72   eta name="keywor
+0130	64 73 22 20 63 6f 6e 74  65 6e 74 3d 22 4c 4a 43   ds" content="LJC
+0140	43 6f 64 65 44 6f 63 2c  20 43 6f 64 65 44 6f 63   CodeDoc, CodeDoc
+0150	2c 20 43 6c 61 73 73 2c  20 50 48 50 22 20 2f 3e   , Class, PHP" />
+0160	0d 0a 09 3c 6d 65 74 61  20 6e 61 6d 65 3d 22 64   ...<meta name="d
+0170	65 73 63 72 69 70 74 69  6f 6e 22 20 63 6f 6e 74   escription" cont
+0180	65 6e 74 3d 22 50 48 50  20 43 6c 61 73 73 20 63   ent="PHP Class c
+0190	6f 64 65 20 64 6f 63 75  6d 65 6e 74 61 74 69 6f   ode documentatio
+01a0	6e 2e 22 20 2f 3e 0d 0a  09 3c 6d 65 74 61 20 6e   n." />...<meta n
+01b0	61 6d 65 3d 22 76 69 65  77 70 6f 72 74 22 20 63   ame="viewport" c
+01c0	6f 6e 74 65 6e 74 3d 22  77 69 64 74 68 3d 64 65   ontent="width=de
+01d0	76 69 63 65 2d 77 69 64  74 68 22 20 2c 20 69 6e   vice-width" , in
+01e0	69 74 69 61 6c 2d 73 63  61 6c 65 3d 31 20 2f 3e   itial-scale=1 />
+01f0	0d 0a 09 3c 6c 69 6e 6b  20 72 65 6c 3d 27 73 74   ...<link rel='st
+0200	79 6c 65 73 68 65 65 74  27 20 74 79 70 65 3d 27   ylesheet' type='
+0210	74 65 78 74 2f 63 73 73  27 20 68 72 65 66 3d 27   text/css' href='
+0220	2e 2e 2f 2e 2e 2f 2e 2e  2f 43 53 53 2f 43 6f 64   ../../../CSS/Cod
+0230	65 44 6f 63 2e 63 73 73  27 20 2f 3e 0d 0a 3c 2f   eDoc.css' />..</
+0240	68 65 61 64 3e 0d 0a 3c  62 6f 64 79 3e 0d 0a 09   head>..<body>...
+0250	3c 62 72 20 2f 3e 0d 0a  09 3c 64 69 76 20 63 6c   <br />...<div cl
+0260	61 73 73 3d 22 50 61 74  68 54 65 78 74 22 3e 0d   ass="PathText">.
+0270	0a 09 09 2f 3c 61 20 68  72 65 66 3d 22 2e 2e 2f   .../<a href="../
+0280	2e 2e 2f 4c 4a 43 50 48  50 43 6f 64 65 44 6f 63   ../LJCPHPCodeDoc
+0290	2e 68 74 6d 6c 23 47 65  6e 43 6f 64 65 44 6f 63   .html#GenCodeDoc
+02a0	4c 69 62 22 3e 4c 4a 43  50 48 50 43 6f 64 65 44   Lib">LJCPHPCodeD
+02b0	6f 63 3c 2f 61 3e 0d 0a  09 09 2f 3c 61 20 68 72   oc</a>..../<a hr
+02c0	65 66 3d 22 2e 2e 2f 4c  4a 43 47 65 6e 54 65 78   ef="../LJCGenTex
+02d0	74 53 65 63 74 69 6f 6e  4c 69 62 2e 68 74 6d 6c   tSectionLib.html
+02e0	22 3e 4c 4a 43 47 65 6e  54 65 78 74 53 65 63 74   ">LJCGenTextSect
+02f0	69 6f 6e 4c 69 62 3c 2f  61 3e 0d 0a 09 09 2f 4c   ionLib</a>..../L
+0300	4a 43 44 69 72 65 63 74  69 76 65 0d 0a 09 3c 2f   JCDirective...</
+0310	64 69 76 3e 0d 0a 09 3c  62 72 20 2f 3e 0d 0a 09   div>...<br />...
+0320	3c 64 69 76 20 69 64 3d  27 48 65 61 64 65 72 27   <div id='Header'
+0330	3e 0d 0a 09 09 3c 64 69  76 20 69 64 3d 27 54 69   >....<div id='Ti
+0340	74 6c 65 27 3e 43 6c 61  73 73 20 4c 4a 43 44 69   tle'>Class LJCDi
+0350	72 65 63 74 69 76 65 3c  2f 64 69 76 3e 0d 0a 09   rective</div>...
+0360	3c 2f 64 69 76 3e 0d 0a  09 3c 62 72 20 2f 3e 0d   </div>...<br />.
+0370	0a 09 3c 64 69 76 20 63  6c 61 73 73 3d 27 54 65   ..<div class='Te
+0380	78 74 27 3e 53 79 6e 74  61 78 3c 2f 64 69 76 3e   xt'>Syntax</div>
+0390	0d 0a 09 3c 62 72 20 2f  3e 0d 0a 09 3c 64 69 76   ...<br />...<div
+03a0	20 63 6c 61 73 73 3d 27  53 65 63 74 69 6f 6e 43    class='SectionC
+03b0	6f 6e 74 61 69 6e 65 72  27 3e 0d 0a 09 09 3c 74   ontainer'>....<t
+03c0	61 62 6c 65 20 63 6c 61  73 73 3d 27 43 6f 64 65   able class='Code
+03d0	54 61 62 6c 65 27 3e 0d  0a 09 09 09 3c 74 62 6f   Table'>.....<tbo
+03e0	64 79 3e 0d 0a 09 09 09  09 3c 74 72 3e 3c 74 68   dy>......<tr><th
+03f0	20 63 6c 61 73 73 3d 27  43 6f 64 65 54 61 62 6c    class='CodeTabl
+0400	65 27 3e 50 48 50 3c 2f  74 68 3e 3c 2f 74 72 3e   e'>PHP</th></tr>
+0410	0d 0a 09 09 09 09 3c 74  72 20 63 6c 61 73 73 3d   ......<tr class=
+0420	27 43 6f 64 65 54 61 62  6c 65 27 3e 0d 0a 09 09   'CodeTable'>....
+0430	09 09 09 3c 74 64 20 63  6c 61 73 73 3d 27 43 6f   ...<td class='Co
+0440	64 65 54 61 62 6c 65 27  3e 0d 0a 09 09 09 09 09   deTable'>.......
+0450	09 63 6c 61 73 73 20 4c  4a 43 44 69 72 65 63 74   .class LJCDirect
+0460	69 76 65 0d 0a 09 09 09  09 09 3c 2f 74 64 3e 0d   ive.......</td>.
+0470	0a 09 09 09 09 3c 2f 74  72 3e 0d 0a 09 09 09 3c   .....</tr>.....<
+0480	2f 74 62 6f 64 79 3e 0d  0a 09 09 3c 2f 74 61 62   /tbody>....</tab
+0490	6c 65 3e 0d 0a 09 3c 2f  64 69 76 3e 0d 0a 09 3c   le>...</div>...<
+04a0	62 72 20 2f 3e 0d 0a 09  3c 64 69 76 20 63 6c 61   br />...<div cla
+04b0	73 73 3d 27 54 65 78 74  27 3e 0d 0a 09 09 52 65   ss='Text'>....Re
+04c0	70 72 65 73 65 6e 74 73  20 61 20 74 65 6d 70 6c   presents a templ
+04d0	61 74 65 20 44 69 72 65  63 74 69 76 65 2e 0d 0a   ate Directive...
+04e0	09 3c 2f 64 69 76 3e 0d  0a 09 3c 62 72 20 2f 3e   .</div>...<br />
+04f0	0d 0a 09 3c 64 69 76 20  63 6c 61 73 73 3d 27 54   ...<div class='T
+0500	65 78 74 27 3e 52 65 6d  61 72 6b 73 3c 2f 64 69   ext'>Remarks</di
+0510	76 3e 0d 0a 09 3c 62 72  20 2f 3e 0d 0a 09 3c 64   v>...<br />...<d
+0520	69 76 20 63 6c 61 73 73  3d 27 54 65 78 74 27 3e   iv class='Text'>
+0530	0d 0a 09 09 54 65 6d 70  6c 61 74 65 20 44 69 72   ....Template Dir
+0540	65 63 74 69 76 65 73 20  61 72 65 20 69 6e 63 6c   ectives are incl
+0550	75 64 65 20 69 6e 20 61  20 76 61 6c 69 64 20 63   ude in a valid c
+0560	6f 6d 6d 65 6e 74 20 6c  69 6e 65 20 66 6f 72 20   omment line for 
+0570	77 68 61 74 65 76 65 72  0a 20 74 65 78 74 20 74   whatever. text t
+0580	79 70 65 20 6f 72 20 6c  61 6e 67 75 61 67 65 20   ype or language 
+0590	69 73 20 62 65 69 6e 67  20 67 65 6e 65 72 61 74   is being generat
+05a0	65 64 2e 20 41 20 6c 69  6e 65 20 77 68 69 63 68   ed. A line which
+05b0	20 63 6f 6e 74 61 69 6e  73 20 61 0a 20 44 69 72    contains a. Dir
+05c0	65 63 74 69 76 65 20 77  69 6c 6c 20 6e 6f 74 20   ective will not 
+05d0	61 70 70 65 61 72 20 69  6e 20 74 68 65 20 67 65   appear in the ge
+05e0	6e 65 72 61 74 65 64 20  74 65 78 74 2e 0a 20 3c   nerated text.. <
+05f0	70 3e 0a 20 54 68 65 20  76 61 6c 69 64 20 44 69   p>. The valid Di
+0600	72 65 63 74 69 76 65 73  20 61 72 65 3a 0a 20 3c   rectives are:. <
+0610	2f 70 3e 0a 20 3c 70 3e  0a 20 26 6c 74 3b 21 2d   /p>. <p>. &lt;!-
+0620	2d 20 23 53 65 63 74 69  6f 6e 42 65 67 69 6e 20   - #SectionBegin 
+0630	4e 61 6d 65 20 2d 2d 3e  0a 20 3c 62 72 20 2f 3e   Name -->. <br />
+0640	0a 20 49 6e 64 69 63 61  74 65 73 20 74 68 65 20   . Indicates the 
+0650	62 65 67 69 6e 6e 69 6e  67 20 6f 66 20 61 20 53   beginning of a S
+0660	65 63 74 69 6f 6e 2e 20  20 54 68 65 20 44 69 72   ection.  The Dir
+0670	65 63 74 69 76 65 20 69  6e 63 6c 75 64 65 73 20   ective includes 
+0680	74 68 65 20 53 65 63 74  69 6f 6e 0a 20 6e 61 6d   the Section. nam
+0690	65 2e 20 54 68 65 20 53  65 63 74 69 6f 6e 20 6e   e. The Section n
+06a0	61 6d 65 20 69 73 20 75  73 65 64 20 69 6e 20 74   ame is used in t
+06b0	68 65 20 20 58 4d 4c 44  61 74 61 20 74 6f 20 69   he  XMLData to i
+06c0	6e 64 69 63 61 74 65 20  74 6f 20 77 68 69 63 68   ndicate to which
+06d0	20 53 65 63 74 69 6f 6e  0a 20 74 68 65 20 49 74    Section. the It
+06e0	65 6d 73 20 61 6e 64 20  52 65 70 6c 61 63 65 6d   ems and Replacem
+06f0	65 6e 74 73 20 61 70 70  6c 79 2e 0a 20 3c 2f 70   ents apply.. </p
+0700	3e 0a 20 3c 70 3e 0a 20  26 6c 74 3b 21 2d 2d 20   >. <p>. &lt;!-- 
+0710	23 53 65 63 74 69 6f 6e  45 6e 64 20 4e 61 6d 65   #SectionEnd Name
+0720	20 2d 2d 3e 0a 20 3c 62  72 20 2f 3e 0a 20 49 6e    -->. <br />. In
+0730	64 69 63 61 74 65 73 20  74 68 65 20 65 6e 64 20   dicates the end 
+0740	6f 66 20 61 20 53 65 63  74 69 6f 6e 2e 20 54 68   of a Section. Th
+0750	65 20 20 73 65 63 74 69  6f 6e 20 6e 61 6d 65 20   e  section name 
+0760	69 73 20 6f 70 74 69 6f  6e 61 6c 20 61 6e 64 20   is optional and 
+0770	73 69 6d 70 6c 79 0a 20  68 65 6c 70 73 20 74 6f   simply. helps to
+0780	20 69 64 65 6e 74 69 66  79 20 77 68 61 74 20 73    identify what s
+0790	65 63 74 69 6f 6e 20 69  73 20 20 65 6e 64 69 6e   ection is  endin
+07a0	67 2e 0a 20 3c 2f 70 3e  0a 20 3c 70 3e 0a 20 26   g.. </p>. <p>. &
+07b0	6c 74 3b 21 2d 2d 20 23  56 61 6c 75 65 20 5f 52   lt;!-- #Value _R
+07c0	65 70 6c 61 63 65 6d 65  6e 74 56 61 6c 75 65 5f   eplacementValue_
+07d0	20 2d 2d 3e 0a 20 3c 62  72 20 2f 3e 0a 20 41 20    -->. <br />. A 
+07e0	76 61 6c 75 65 20 44 69  72 65 63 74 69 76 65 20   value Directive 
+07f0	69 73 20 63 75 72 72 65  6e 74 6c 79 20 69 6e 66   is currently inf
+0800	6f 72 6d 61 74 69 6f 6e  61 6c 20 6f 6e 6c 79 2e   ormational only.
+0810	20 20 49 74 20 69 64 65  6e 74 69 66 69 65 73 20     It identifies 
+0820	61 0a 20 52 65 70 6c 61  63 65 6d 65 6e 74 20 76   a. Replacement v
+0830	61 6c 75 65 20 74 68 61  74 20 61 70 70 65 61 72   alue that appear
+0840	73 20 69 6e 20 49 74 65  6d 73 20 77 69 74 68 69   s in Items withi
+0850	6e 20 74 68 61 74 20 20  53 65 63 74 69 6f 6e 2e   n that  Section.
+0860	0a 20 3c 2f 70 3e 0a 20  3c 70 3e 0a 20 26 6c 74   . </p>. <p>. &lt
+0870	3b 21 2d 2d 20 23 49 66  42 65 67 69 6e 20 5f 52   ;!-- #IfBegin _R
+0880	65 70 6c 61 63 65 6d 65  6e 74 56 61 6c 75 65 5f   eplacementValue_
+0890	20 43 6f 6d 70 61 72 69  73 6f 6e 56 61 6c 75 65    ComparisonValue
+08a0	20 2d 2d 3e 0a 20 3c 62  72 20 2f 3e 0a 20 54 68    -->. <br />. Th
+08b0	69 73 20 44 69 72 65 63  74 69 76 65 20 69 6e 64   is Directive ind
+08c0	69 63 61 74 65 73 20 74  68 65 20 62 65 67 69 6e   icates the begin
+08d0	6e 69 6e 67 20 6f 66 20  63 6f 6e 64 69 74 69 6f   ning of conditio
+08e0	6e 61 6c 20 74 65 78 74  2e 20 49 66 20 74 68 65   nal text. If the
+08f0	0a 20 5f 52 65 70 6c 61  63 65 6d 65 6e 74 56 61   . _ReplacementVa
+0900	6c 75 65 5f 20 69 73 20  20 65 71 75 61 6c 20 74   lue_ is  equal t
+0910	6f 20 74 68 65 20 43 6f  6d 70 61 72 69 73 6f 6e   o the Comparison
+0920	56 61 6c 75 65 2c 20 74  68 65 6e 20 74 68 65 20   Value, then the 
+0930	6e 65 78 74 20 74 65 78  74 0a 20 6c 69 6e 65 73   next text. lines
+0940	20 61 72 65 20 67 65 6e  65 72 61 74 65 64 20 75    are generated u
+0950	70 20 74 6f 20 20 74 68  65 20 23 49 66 45 6c 73   p to  the #IfEls
+0960	65 20 6f 72 20 23 49 66  45 6e 64 20 64 69 72 65   e or #IfEnd dire
+0970	63 74 69 76 65 2e 0a 20  3c 62 72 20 2f 3e 0a 20   ctive.. <br />. 
+0980	54 68 65 20 43 6f 6d 70  61 72 69 73 6f 6e 56 61   The ComparisonVa
+0990	6c 75 65 20 63 61 6e 20  62 65 20 22 4e 6f 74 4e   lue can be "NotN
+09a0	75 6c 6c 22 2e 20 54 68  65 20 23 49 66 42 65 67   ull". The #IfBeg
+09b0	69 6e 20 77 69 6c 6c 20  62 65 20 74 72 75 65 20   in will be true 
+09c0	69 66 20 74 68 65 0a 20  5f 52 65 70 6c 61 63 65   if the. _Replace
+09d0	6d 65 6e 74 56 61 6c 75  65 5f 20 69 73 20 6e 6f   mentValue_ is no
+09e0	74 20 6e 75 6c 6c 2e 0a  20 3c 2f 70 3e 0a 20 3c   t null.. </p>. <
+09f0	70 3e 0a 20 26 6c 74 3b  21 2d 2d 20 23 49 66 45   p>. &lt;!-- #IfE
+0a00	6c 73 65 20 2d 2d 3e 0a  20 3c 62 72 20 2f 3e 0a   lse -->. <br />.
+0a10	20 54 68 65 20 6e 65 78  74 20 74 65 78 74 20 6c    The next text l
+0a20	69 6e 65 73 20 61 72 65  20 67 65 6e 65 72 61 74   ines are generat
+0a30	65 64 20 20 75 70 20 74  6f 20 74 68 65 20 23 49   ed  up to the #I
+0a40	66 45 6e 64 20 44 69 72  65 63 74 69 76 65 20 69   fEnd Directive i
+0a50	66 20 74 68 65 0a 20 23  49 66 42 65 67 69 6e 20   f the. #IfBegin 
+0a60	44 69 72 65 63 74 69 76  65 20 77 61 73 20 66 61   Directive was fa
+0a70	6c 73 65 2e 0a 20 3c 2f  70 3e 0a 20 3c 70 3e 0a   lse.. </p>. <p>.
+0a80	20 26 6c 74 3b 21 2d 2d  20 23 49 66 45 6e 64 20    &lt;!-- #IfEnd 
+0a90	5f 52 65 70 6c 61 63 65  6d 65 6e 74 56 61 6c 75   _ReplacementValu
+0aa0	65 5f 20 63 6f 6d 70 61  72 69 73 6f 6e 56 61 6c   e_ comparisonVal
+0ab0	75 65 20 2d 2d 3e 0a 20  3c 62 72 20 2f 3e 0a 20   ue -->. <br />. 
+0ac0	54 68 65 20 65 6e 64 20  6f 66 20 74 68 65 20 23   The end of the #
+0ad0	49 66 42 65 67 69 6e 20  74 65 78 74 2e 20 54 68   IfBegin text. Th
+0ae0	65 20 5f 52 65 70 6c 61  63 65 6d 65 6e 74 56 61   e _ReplacementVa
+0af0	6c 75 65 5f 20 61 6e 64  20 43 6f 6d 70 61 72 69   lue_ and Compari
+0b00	73 6f 6e 56 61 6c 75 65  0a 20 61 72 65 20 6f 70   sonValue. are op
+0b10	74 69 6f 6e 61 6c 20 61  6e 64 20 68 65 6c 70 20   tional and help 
+0b20	74 6f 20 69 64 65 6e 74  69 66 79 20 77 68 69 63   to identify whic
+0b30	68 20 23 49 66 42 65 67  69 6e 20 69 73 20 65 6e   h #IfBegin is en
+0b40	64 69 6e 67 2e 0d 0a 09  3c 2f 64 69 76 3e 0d 0a   ding....</div>..
+0b50	09 3c 62 72 20 2f 3e 0d  0a 09 3c 64 69 76 20 69   .<br />...<div i
+0b60	64 3d 27 54 69 74 6c 65  27 3e 50 75 62 6c 69 63   d='Title'>Public
+0b70	20 46 75 6e 63 74 69 6f  6e 73 3c 2f 64 69 76 3e    Functions</div>
+0b80	0d 0a 09 3c 74 61 62 6c  65 20 63 6c 61 73 73 3d   ...<table class=
+0b90	27 4c 69 73 74 54 61 62  6c 65 27 3e 0d 0a 09 09   'ListTable'>....
+0ba0	3c 74 72 3e 0d 0a 09 09  09 3c 74 64 20 63 6c 61   <tr>.....<td cla
+0bb0	73 73 3d 27 4c 69 73 74  54 61 62 6c 65 27 20 77   ss='ListTable' w
+0bc0	69 64 74 68 3d 27 32 35  25 27 3e 3c 61 20 68 72   idth='25%'><a hr
+0bd0	65 66 3d 27 4c 4a 43 44  69 72 65 63 74 69 76 65   ef='LJCDirective
+0be0	46 69 6e 64 2e 68 74 6d  6c 27 3e 46 69 6e 64 3c   Find.html'>Find<
+0bf0	2f 61 3e 3c 2f 74 64 3e  0d 0a 09 09 09 3c 74 64   /a></td>.....<td
+0c00	20 63 6c 61 73 73 3d 27  4c 69 73 74 54 61 62 6c    class='ListTabl
+0c10	65 27 3e 0d 0a 09 09 09  09 46 69 6e 64 20 61 6e   e'>......Find an
+0c20	79 20 44 69 72 65 63 74  69 76 65 73 20 69 6e 20   y Directives in 
+0c30	61 20 6c 69 6e 65 2e 0d  0a 09 09 09 3c 2f 74 64   a line......</td
+0c40	3e 0d 0a 09 09 3c 2f 74  72 3e 0d 0a 09 09 3c 74   >....</tr>....<t
+0c50	72 3e 0d 0a 09 09 09 3c  74 64 20 63 6c 61 73 73   r>.....<td class
+0c60	3d 27 4c 69 73 74 54 61  62 6c 65 27 20 77 69 64   ='ListTable' wid
+0c70	74 68 3d 27 32 35 25 27  3e 3c 61 20 68 72 65 66   th='25%'><a href
+0c80	3d 27 4c 4a 43 44 69 72  65 63 74 69 76 65 63 6f   ='LJCDirectiveco
+0c90	6e 73 74 72 75 63 74 2e  68 74 6d 6c 27 3e 63 6f   nstruct.html'>co
+0ca0	6e 73 74 72 75 63 74 3c  2f 61 3e 3c 2f 74 64 3e   nstruct</a></td>
+0cb0	0d 0a 09 09 09 3c 74 64  20 63 6c 61 73 73 3d 27   .....<td class='
+0cc0	4c 69 73 74 54 61 62 6c  65 27 3e 0d 0a 09 09 09   ListTable'>.....
+0cd0	09 49 6e 69 74 69 61 6c  69 7a 65 73 20 61 6e 20   .Initializes an 
+0ce0	6f 62 6a 65 63 74 20 69  6e 73 74 61 6e 63 65 2e   object instance.
+0cf0	0d 0a 09 09 09 3c 2f 74  64 3e 0d 0a 09 09 3c 2f   .....</td>....</
+0d00	74 72 3e 0d 0a 09 3c 2f  74 61 62 6c 65 3e 0d 0a   tr>...</table>..
+0d10	09 3c 64 69 76 20 63 6c  61 73 73 3d 27 54 65 78   .<div class='Tex
+0d20	74 27 3e 32 20 46 75 6e  63 74 69 6f 6e 73 3c 2f   t'>2 Functions</
+0d30	64 69 76 3e 0d 0a 09 3c  62 72 20 2f 3e 0d 0a 09   div>...<br />...
+0d40	3c 64 69 76 20 69 64 3d  27 54 69 74 6c 65 27 3e   <div id='Title'>
+0d50	50 75 62 6c 69 63 20 50  72 6f 70 65 72 74 69 65   Public Propertie
+0d60	73 3c 2f 64 69 76 3e 0d  0a 09 3c 74 61 62 6c 65   s</div>...<table
+0d70	20 63 6c 61 73 73 3d 27  4c 69 73 74 54 61 62 6c    class='ListTabl
+0d80	65 27 3e 0d 0a 09 09 3c  74 72 3e 0d 0a 09 09 09   e'>....<tr>.....
+0d90	3c 74 64 20 63 6c 61 73  73 3d 27 4c 69 73 74 54   <td class='ListT
+0da0	61 62 6c 65 27 20 77 69  64 74 68 3d 27 32 35 25   able' width='25%
+0db0	27 3e 3c 61 20 68 72 65  66 3d 27 4c 4a 43 44 69   '><a href='LJCDi
+0dc0	72 65 63 74 69 76 65 24  4e 61 6d 65 2e 68 74 6d   rective$Name.htm
+0dd0	6c 27 3e 24 4e 61 6d 65  3c 2f 61 3e 3c 2f 74 64   l'>$Name</a></td
+0de0	3e 0d 0a 09 09 09 3c 74  64 20 63 6c 61 73 73 3d   >.....<td class=
+0df0	27 4c 69 73 74 54 61 62  6c 65 27 3e 0d 0a 09 09   'ListTable'>....
+0e00	09 09 54 68 65 20 44 69  72 65 63 74 69 76 65 20   ..The Directive 
+0e10	4e 61 6d 65 2e 0d 0a 09  09 09 3c 2f 74 64 3e 0d   Name......</td>.
+0e20	0a 09 09 3c 2f 74 72 3e  0d 0a 09 09 3c 74 72 3e   ...</tr>....<tr>
+0e30	0d 0a 09 09 09 3c 74 64  20 63 6c 61 73 73 3d 27   .....<td class='
+0e40	4c 69 73 74 54 61 62 6c  65 27 20 77 69 64 74 68   ListTable' width
+0e50	3d 27 32 35 25 27 3e 3c  61 20 68 72 65 66 3d 27   ='25%'><a href='
+0e60	4c 4a 43 44 69 72 65 63  74 69 76 65 24 54 79 70   LJCDirective$Typ
+0e70	65 2e 68 74 6d 6c 27 3e  24 54 79 70 65 3c 2f 61   e.html'>$Type</a
+0e80	3e 3c 2f 74 64 3e 0d 0a  09 09 09 3c 74 64 20 63   ></td>.....<td c
+0e90	6c 61 73 73 3d 27 4c 69  73 74 54 61 62 6c 65 27   lass='ListTable'
+0ea0	3e 0d 0a 09 09 09 09 54  68 65 20 44 69 72 65 63   >......The Direc
+0eb0	74 69 76 65 20 54 79 70  65 2e 0d 0a 09 09 09 3c   tive Type......<
+0ec0	2f 74 64 3e 0d 0a 09 09  3c 2f 74 72 3e 0d 0a 09   /td>....</tr>...
+0ed0	09 3c 74 72 3e 0d 0a 09  09 09 3c 74 64 20 63 6c   .<tr>.....<td cl
+0ee0	61 73 73 3d 27 4c 69 73  74 54 61 62 6c 65 27 20   ass='ListTable' 
+0ef0	77 69 64 74 68 3d 27 32  35 25 27 3e 3c 61 20 68   width='25%'><a h
+0f00	72 65 66 3d 27 4c 4a 43  44 69 72 65 63 74 69 76   ref='LJCDirectiv
+0f10	65 24 56 61 6c 75 65 2e  68 74 6d 6c 27 3e 24 56   e$Value.html'>$V
+0f20	61 6c 75 65 3c 2f 61 3e  3c 2f 74 64 3e 0d 0a 09   alue</a></td>...
+0f30	09 09 3c 74 64 20 63 6c  61 73 73 3d 27 4c 69 73   ..<td class='Lis
+0f40	74 54 61 62 6c 65 27 3e  0d 0a 09 09 09 09 54 68   tTable'>......Th
+0f50	65 20 63 6f 6d 70 61 72  65 20 76 61 6c 75 65 2e   e compare value.
+0f60	0d 0a 09 09 09 3c 2f 74  64 3e 0d 0a 09 09 3c 2f   .....</td>....</
+0f70	74 72 3e 0d 0a 09 3c 2f  74 61 62 6c 65 3e 0d 0a   tr>...</table>..
+0f80	09 3c 62 72 20 2f 3e 0d  0a 09 3c 64 69 76 20 63   .<br />...<div c
+0f90	6c 61 73 73 3d 27 53 6d  61 6c 6c 54 65 78 74 27   lass='SmallText'
+0fa0	3e 43 6f 70 79 72 69 67  68 74 20 26 63 6f 70 79   >Copyright &copy
+0fb0	3b 20 4c 65 73 74 65 72  20 4a 2e 20 43 6c 61 72   ; Lester J. Clar
+0fc0	6b 20 32 30 32 32 20 2d  20 41 6c 6c 20 52 69 67   k 2022 - All Rig
+0fd0	68 74 73 20 52 65 73 65  72 76 65 64 3c 2f 64 69   hts Reserved</di
+0fe0	76 3e 0d 0a 3c 2f 62 6f  64 79 3e 0d 0a 3c 2f 68   v>..</body>..</h
+0ff0	74 6d 6c 3e 0d 0a                                  tml>..
