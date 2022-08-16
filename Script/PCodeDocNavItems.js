@@ -1,5 +1,5 @@
 "use strict";
-// CodeDocNavItems.js
+// PCodeDocNavItems.js
 
 // ***************
 /// <summary>Contains CityDetail event handlers.</summary>

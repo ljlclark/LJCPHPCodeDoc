@@ -1,5 +1,5 @@
 "use strict";
-// CodeDocNavEvents.js
+// PCodeDocNavEvents.js
 
 // ***************
 // Contains LJCNavPHPCodeDoc event handlers.
