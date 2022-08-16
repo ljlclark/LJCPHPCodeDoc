@@ -1,4 +1,3 @@
-Copyright (c) Lester J. Clark 2022 - All Rights Reserved
 ReadMeLJCPHPCodeDoc.txt
 
   LJCPHPCodeDoc - The HTML Code Documentation.
