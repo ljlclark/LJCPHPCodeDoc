@@ -2,61 +2,61 @@
 <!-- LJCDataManagerCreateDataCollection.html -->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<title>CreateDataCollection</title>
-	<meta charset="utf-8" />
-	<meta name="author" content="Lester J. Clark" />
-	<meta name="keywords" content="LJCCodeDoc, CodeDoc, Function, PHP" />
-	<meta name="description" content="PHP Function code documentation." />
-	<meta name="viewport" content="width=device-width" , initial-scale=1 />
-	<link rel='stylesheet' type='text/css' href='../../CSS/CodeDoc.css' />
+  <title>CreateDataCollection</title>
+  <meta charset="utf-8" />
+  <meta name="author" content="Lester J. Clark" />
+  <meta name="keywords" content="LJCCodeDoc, CodeDoc, Function, PHP" />
+  <meta name="description" content="PHP Function code documentation." />
+  <meta name="viewport" content="width=device-width" initial-scale=1 />
+  <link rel='stylesheet' type='text/css' href='../../CSS/CodeDoc.css' />
 </head>
 <body>
-	<br />
-	<div class="PathText">
-		/<a href="../../LJCPHPCodeDoc.html#GenCodeDocLib">LJCPHPCodeDoc</a>
-		/<a href="../LJCDataManagerLib.html">LJCDataManagerLib</a>
-		/<a href="LJCDataManager.html">LJCDataManager</a>
-		/CreateDataCollection
-	</div>
-	<br />
-	<div id='Header'>
-		<div id='Title'>Function CreateDataCollection</div>
-	</div>
-	<br />
-	<div id='Title'>Parameters</div>
-	<div class='Text'>$collection - A Collection Object to use as a template.</div>
-	<div class='Text'>$dataObject - A Data Object to use as a template.</div>
-	<div class='Text'>$rows - An array of data records.</div>
-	<br />
-	<div class='Text'>Returns</div>
-	<br />
-	<div class='Text'>
-		An array of Data object records or null if there are no rows.
-	</div>
-	<br />
-	<div class='Text'>Syntax</div>
-	<br />
-	<div class='SectionContainer'>
-		<table class='CodeTable'>
-			<tbody>
-				<tr><th class='CodeTable'>PHP</th></tr>
-				<tr class='CodeTable'>
-					<td class='CodeTable'>
-						public function CreateDataCollection(object $collection<br />, object $dataObject, array $rows)
-					</td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
-	<br />
-	<div class='Text'>
-		Creates an array of typed Data Objects from a DB rows array.
-	</div>
-	<br />
-	<div class='Text'>Remarks</div>
-	<br />
-	<div class='Text'>
-		This method provides Object to Relational Mapping (ORM) as it maps an
+  <br />
+  <div class="PathText">
+    / <a href="../../LJCPHPCodeDoc.html#GenCodeDocLib">LJCPHPCodeDoc</a>
+    / <a href="../LJCDataManagerLib.html">LJCDataManagerLib</a>
+    / <a href="LJCDataManager.html">LJCDataManager</a>
+    / CreateDataCollection
+  </div>
+  <br />
+  <div id='Header'>
+    <div id='Title'>Function CreateDataCollection</div>
+  </div>
+  <br />
+  <div id='Title'>Parameters</div>
+  <div class='Text'>$collection - A Collection Object to use as a template.</div>
+  <div class='Text'>$dataObject - A Data Object to use as a template.</div>
+  <div class='Text'>$rows - An array of data records.</div>
+  <br />
+  <div class='Text'>Returns</div>
+  <br />
+  <div class='Text'>
+    An array of Data object records or null if there are no rows.
+  </div>
+  <br />
+  <div class='Text'>Syntax</div>
+  <br />
+  <div class='SectionContainer'>
+    <table class='CodeTable'>
+      <tbody>
+        <tr><th class='CodeTable'>PHP</th></tr>
+        <tr class='CodeTable'>
+          <td class='CodeTable'>
+            public function CreateDataCollection(object $collection<br />, object $dataObject, array $rows)
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br />
+  <div class='Text'>
+    Creates an array of typed Data Objects from a DB rows array.
+  </div>
+  <br />
+  <div class='Text'>Remarks</div>
+  <br />
+  <div class='Text'>
+    This method provides Object to Relational Mapping (ORM) as it maps an
  array  of data records into a collection of strongly  typed data objects.
  It calls the CreateDataObject() method for each data record and adds the
  resulting typed object to the strongly typed collection.
@@ -73,17 +73,17 @@
  from the method signature.
  </p>
  The DataObject must supply a Clone() method.
-	</div>
-	<br />
-	<div class='Text'>Example</div>
-	<br />
-	<div class='SectionContainer'>
-		<table class='CodeTable'>
-			<tbody>
-				<tr class='CodeTable'><th class='CodeTable'>PHP</th></tr>
-				<tr class='CodeTable'>
-					<td class='CodeTable'>
-						<pre style='margin-left: 2px;'>
+  </div>
+  <br />
+  <div class='Text'>Example</div>
+  <br />
+  <div class='SectionContainer'>
+    <table class='CodeTable'>
+      <tbody>
+        <tr class='CodeTable'><th class='CodeTable'>PHP</th></tr>
+        <tr class='CodeTable'>
+          <td class='CodeTable'>
+            <pre style='margin-left: 2px;'>
  $webCommonPath = "c:/inetpub/wwwroot/LJCPHPCommon";
  require_once "$webCommonPath/LJCDataManagerLib.php";
  
@@ -104,10 +104,10 @@
    echo $person->ID;
    echo $person->Name;
  }</pre>
-					</td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </body>
 </html>
