@@ -48,6 +48,17 @@ ul {
   width: 100%;
 }
 
+#menuIco {
+  display: none;
+  height: 23px;
+  width: 23px;
+}
+
+#menubar {
+  display: none;
+  height: 21px;
+}
+
 #sidebar {
   background-color: lightsteelblue;
   display: inline-block;
