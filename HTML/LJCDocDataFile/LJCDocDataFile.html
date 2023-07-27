@@ -1,0 +1,173 @@
+﻿<!DOCTYPE html>
+<!-- Copyright(c) Lester J. Clark 2022 - All Rights Reserved -->
+<!-- LJCDocDataFile.html -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>LJCDocDataFile</title>
+  <meta charset='utf-8' />
+  <meta name="author" content="Lester J. Clark" />
+  <meta name="keywords" content="LJCCodeDoc, CodeDoc, Class, PHP" />
+  <meta name="description" content="PHP Class code documentation." />
+  <meta name="viewport" content="width=device-width" , initial-scale=1 />
+  <link rel='stylesheet' type='text/css' href='../../CSS/CodeDoc.css' />
+</head>
+<body style="background: #F0F5FF">
+  <div style="margin-left: 15px; margin-right: 10px">
+    <br />
+    <div class="PathText">
+      / <a href="../../LJCPHPCodeDoc.html#GenCodeDocLib">LJCPHPCodeDoc</a>
+      / <a href="../LJCDocDataLib.html">LJCDocDataLib</a>
+      / LJCDocDataFile
+    </div>
+    <br />
+    <div id='Header'>
+      <div id='Title'>Class LJCDocDataFile</div>
+    </div>
+    <br />
+    <div class='Text'>Syntax</div>
+    <br />
+    <div class='SectionContainer'>
+      <table class='CodeTable'>
+        <tbody>
+          <tr><th class='CodeTable'>PHP</th></tr>
+          <tr class='CodeTable'>
+            <td class='CodeTable'>
+              class LJCDocDataFile
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <br />
+    <div class='Text'>
+      Represents DocData Lib File XML Comments.
+    </div>
+    <br />
+    <div class='Text'>Remarks</div>
+    <br />
+    <div class='Text'>
+      The DocData XML is intended to contain the XML Comments based on the PHP
+ file structure of Classes, Methods and Properties.
+ <br />
+ <pre> &lt;LJCDocDataFile&gt;
+   &lt;Name/&gt;
+   &lt;Summary/&gt;
+   &lt;Remarks/&gt;
+   &lt;Classes&gt;
+     &lt;Class&gt;
+       &lt;Name/&gt;
+       &lt;Summary/&gt;
+       &lt;Remarks/&gt;
+       &lt;Methods&gt;
+         &lt;Method&gt;
+           &lt;Name/&gt;
+           &lt;Summary/&gt;
+           &lt;Params&gt;
+             &lt;Param&gt;
+               &lt;Name/&gt;
+               &lt;Summary/&gt;
+             &lt;/Param&gt;
+           &lt;/Params&gt;
+           &lt;Remarks/&gt;
+           &lt;Returns/&gt;
+           &lt;Syntax/&gt;
+           &lt;Code/&gt;
+         &lt;/Method&gt;
+       &lt;/Methods&gt;
+       &lt;Properties&gt;
+         &lt;Property&gt;
+           &lt;Name/&gt;
+           &lt;Summary/&gt;
+           &lt;Syntax/&gt;
+         &lt;/Property&gt;
+       &lt;/Properties&gt;
+     &lt;/Class&gt;
+   &lt;/Classes&gt;
+ &lt;/LJCDocDataFile&gt;
+    </div>
+    <br />
+    <div id='Title'>Public Functions</div>
+    <table class='ListTable'>
+      <tr>
+        <td class='ListTable' width='25%'><a href='LJCDocDataFileDeserialize.html'>Deserialize</a></td>
+        <td class='ListTable'>
+          Deserializes the data from an LJCDocDataFile XML file.
+        </td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'><a href='LJCDocDataFileDeserializeString.html'>DeserializeString</a></td>
+        <td class='ListTable'>
+          Deserializes the data from an LJCDocDataFile XML string.
+        </td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'><a href='LJCDocDataFileGetProperties.html'>GetProperties</a></td>
+        <td class='ListTable'>
+          Deserialize Properties from the Class node.
+        </td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'><a href='LJCDocDataFileconstruct.html'>construct</a></td>
+        <td class='ListTable'>
+          _FunctionSummary_
+        </td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'><a href='LJCDocDataFileClone.html'>Clone</a></td>
+        <td class='ListTable'>
+          Creates a Clone of the current object.
+        </td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'><a href='LJCDocDataFileSerialize.html'>Serialize</a></td>
+        <td class='ListTable'>
+          Writes the serialized XML.
+        </td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'><a href='LJCDocDataFileSerializeToString.html'>SerializeToString</a></td>
+        <td class='ListTable'>
+          _FunctionSummary_
+        </td>
+      </tr>
+    </table>
+    <div class='Text'>7 Functions</div>
+    <br />
+    <div id='Title'>Public Properties</div>
+    <table class='ListTable'>
+      <tr>
+        <td class='ListTable' width='25%'><a href='LJCDocDataFile$Classes.html'>$Classes</a></td>
+        <td class='ListTable'>
+          The Class collection.
+        </td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'><a href='LJCDocDataFile$Functions.html'>$Functions</a></td>
+        <td class='ListTable'>
+          The Function array.
+        </td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'><a href='LJCDocDataFile$Name.html'>$Name</a></td>
+        <td class='ListTable'>
+          The Name value.
+        </td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'><a href='LJCDocDataFile$Remarks.html'>$Remarks</a></td>
+        <td class='ListTable'>
+          The Name value.
+        </td>
+      </tr>
+      <tr>
+        <td class='ListTable' width='25%'><a href='LJCDocDataFile$Summary.html'>$Summary</a></td>
+        <td class='ListTable'>
+          The Summary value.
+        </td>
+      </tr>
+    </table>
+    <br />
+    <div class='SmallText'>Copyright &copy; Lester J. Clark 2022 - All Rights Reserved</div>
+  </div>
+</body>
+</html>
