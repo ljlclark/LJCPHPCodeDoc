@@ -63,7 +63,9 @@
           <tr class='CodeTable'>
             <td class='CodeTable'>
               <pre style='margin-left: 2px;'>
- require_once "LJCDocDataLib.php";
+ include_once "LJCRoot.php";
+ $prefix = RelativePrefix();
+ include_once "$prefix/GenDoc/DocDataLib/LJCDocDataLib.php";
  
  $docDataFile = LJCDocDataFile::Deserialize("DocData.xml");</pre>
             </td>

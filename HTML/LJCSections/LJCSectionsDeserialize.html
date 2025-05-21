@@ -87,8 +87,9 @@
    &lt;/Sections&gt;
  &lt;/Data&gt;
  
- $webCommonPath = "c:/inetpub/wwwroot/LJCPHPCommon";
- require_once "$webCommonPath/LJCGenTextSectionLib.php";
+ include_once "LJCRoot.php";
+ $prefix = RelativePrefix();
+ include_once "$prefix/GenTextLib/LJCGenTextSectionLib.php";
  
  // $sections is an LJCSections object.
  $sections = LJCSections::Deserialize("Sections.xml");</pre>

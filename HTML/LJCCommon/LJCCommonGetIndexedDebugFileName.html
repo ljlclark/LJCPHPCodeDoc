@@ -52,7 +52,7 @@
     </div>
     <br />
     <div class='Text'>
-      Gets the indexed Debug file name. (E)
+      Gets the indexed Debug file name.
     </div>
     <br />
     <div class='Text'>Remarks</div>
@@ -77,12 +77,13 @@
           <tr class='CodeTable'>
             <td class='CodeTable'>
               <pre style='margin-left: 2px;'>
- $webCommonPath = "c:/inetpub/wwwroot/LJCPHPCommon";
- require_once "$webCommonPath/LJCCommonLib.php";
+ include_once "LJCRoot.php";
+ $prefix = RelativePrefix();
+ include_once "$prefix/LJCPHPCommon/LJCCollectionLib.php";
  
  // $debugFileSpec = "Debug\SourceFile1.txt"
  $debugFileSpec = LJCCommon::GetIndexedDebugFileName("Debug"
-   , "SourceFile.php");</pre>
+    , "SourceFile.php");</pre>
             </td>
           </tr>
         </tbody>

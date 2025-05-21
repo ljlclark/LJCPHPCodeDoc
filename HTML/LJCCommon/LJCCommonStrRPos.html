@@ -54,7 +54,7 @@
     </div>
     <br />
     <div class='Text'>
-      Gets the last index for the search value. (E)
+      Gets the last index for the search value.
     </div>
     <br />
     <div class='Text'>Remarks</div>
@@ -76,8 +76,9 @@
           <tr class='CodeTable'>
             <td class='CodeTable'>
               <pre style='margin-left: 2px;'>
- $webCommonPath = "c:/inetpub/wwwroot/LJCPHPCommon";
- require_once "$webCommonPath/LJCCommonLib.php";
+ include_once "LJCRoot.php";
+ $prefix = RelativePrefix();
+ include_once "$prefix/LJCPHPCommon/LJCCollectionLib.php";
  
  // $index = 13
  $index = LJCCommon::StrRPos("This here is here.", "Here");

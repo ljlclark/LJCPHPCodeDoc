@@ -45,7 +45,7 @@
           <tr><th class='CodeTable'>PHP</th></tr>
           <tr class='CodeTable'>
             <td class='CodeTable'>
-              public function CreateDocDataXMLString(string $codeFileSpec, bool $writeXML = false<br />, string $outputPath = null) : ?string
+              public function CreateDocDataXMLString(string $codeFileSpec<br />, bool $writeXML = false, string $outputPath = null) : ?string
             </td>
           </tr>
         </tbody>
@@ -65,10 +65,12 @@
           <tr class='CodeTable'>
             <td class='CodeTable'>
               <pre style='margin-left: 2px;'>
- require_once "LJCDocDataGenLib.php";
+ include_once "LJCRoot.php";
+ $prefix = RelativePrefix();
+ include_once "$prefix/GenDoc/DocDataLib/LJCDocDataGenLib.php";
  
  $docDataGen = new LJCDocDataGen();
- $xmlString = $docDataGen->CreateDocXMLString("SourceFile.php");</pre>
+ $xmlString = $docDataGen->CreateDocDataXMLString("SourceFile.php");</pre>
             </td>
           </tr>
         </tbody>

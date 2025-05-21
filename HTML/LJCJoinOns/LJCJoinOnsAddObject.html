@@ -58,8 +58,9 @@
           <tr class='CodeTable'>
             <td class='CodeTable'>
               <pre style='margin-left: 2px;'>
- $webCommonPath = "c:/inetpub/wwwroot/LJCPHPCommon";
- require_once "$webCommonPath/LJCDBAccessLib.php";
+ include_once "LJCRoot.php";
+ $prefix = RelativePrefix();
+  include_once "$prefix/LJCPHPCommon/LJCDBAccessLib.php";
  
  $joinOns = new LJCJoinOns();
  $joinOn = new LJCJoinOn("FromColumnName", "ToColumnName");

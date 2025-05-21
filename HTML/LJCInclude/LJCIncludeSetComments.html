@@ -58,7 +58,9 @@
           <tr class='CodeTable'>
             <td class='CodeTable'>
               <pre style='margin-left: 2px;'>
- require_once "LJCIncludeLib.php";
+ include_once "LJCRoot.php";
+ $prefix = RelativePrefix();
+ include_once "$prefix/GenDoc/DocDataLib/LJCIncludeLib.php";
  
  $includeFile = new LJCInclude();
  $line = "/// &lt;include path='items/SetComment/*' file='Doc/LJCComments.xml'/&gt;"

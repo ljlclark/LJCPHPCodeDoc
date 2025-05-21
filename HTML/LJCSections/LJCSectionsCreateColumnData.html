@@ -65,9 +65,10 @@
           <tr class='CodeTable'>
             <td class='CodeTable'>
               <pre style='margin-left: 2px;'>
- $webCommonPath = "c:/inetpub/wwwroot/LJCPHPCommon";
- require_once "$webCommonPath/LJCDBAccessLib.php";
- require_once "$webCommonPath/LJCGenTextSectionLib.php";
+ include_once "LJCRoot.php";
+ $prefix = RelativePrefix();
+ include_once "$prefix/LJCPHPCommon/LJCDBAccessLib.php";
+ include_once "$prefix/GenTextLib/LJCGenTextSectionLib.php";
  
  $dbAccess = new LJCDbAccess($connectionValues);
  
@@ -76,7 +77,7 @@
  
  // $sections is an LJCSections object.
  $sections = LJCSections::CreateColumnData($dbColumns, $tableName
-   , "ClassName");</pre>
+ , "ClassName");</pre>
             </td>
           </tr>
         </tbody>
