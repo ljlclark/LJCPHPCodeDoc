@@ -60,17 +60,17 @@
           <tr class='CodeTable'>
             <td class='CodeTable'>
               <pre style='margin-left: 2px;'>
- include_once "LJCRoot.php";
- $prefix = RelativePrefix();
- include_once "$prefix/LJCPHPCommon/LJCDBAccessLib.php";
- 
- // See constructor for how to create $connectionValues.
- $dbAccess = new LJCDbAccess($connectionValues);
- 
- $connection = $dbAccess->GetConnection();
- if ($connection != null)
+ // Retrieves a record for the provided SQL statement.
+ private static function GetConnection(LJCConnectionValues $connectionValues)
  {
-   // Use connection to perform low level data access.
+   // See constructor for how to create $connectionValues.
+   $dbAccess = new LJCDbAccess($connectionValues);
+ 
+   $connection = $dbAccess->GetConnection();
+   if (null == $connection)
+   {
+     echo("\r\nGetConnection() The Connection was not created.");
+   }
  }</pre>
             </td>
           </tr>

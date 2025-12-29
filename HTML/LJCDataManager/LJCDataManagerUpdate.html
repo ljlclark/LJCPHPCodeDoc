@@ -77,26 +77,39 @@
           <tr class='CodeTable'>
             <td class='CodeTable'>
               <pre style='margin-left: 2px;'>
- include_once "LJCRoot.php";
- $prefix = RelativePrefix();
- include_once "$prefix/LJCPHPCommon/LJCDataManagerLib.php";
- include_once "$prefix/LJCPHPCommon/LJCDBAccessLib.php";
+ // Updates the records for the provided values.
+ private static function Update(LJCDataManager $manager)
+ {
+   $nameValue = "NameValue";
+   $updateValue = "Updated";
+   $methodName = "Update()";
  
- // See constructor for how to create $connectionValues.
- $tableName = "TableName";
- $manager = new LJCDataManager($connectionValues, $tableName);
+   $data = new LJCDbColumns();
+   $data->Add("Name", value: $nameValue);
+   $affectedCount = $manager->Add($data);
  
- $keyColumns = new LJCDbColumns();
- $keyColumns->Add("ID", value:1);
+   // Update the test data.
+   // See constructor for how to create $manager.
+   $keys = new LJCDbColumns();
+   $keys->Add("Name", value: $nameValue);
+   $data = new LJCDbColumns();
+   $data->Add("Name", value: $updateValue);
+   $affectedCount = $manager->Update($keys, $data);
+   $result = strval($affectedCount);
  
- $dataColumns = new LJCDbColumns();
- $dataColumns->Add("Name", value:"NameValue");
- $affectedCount = $manager->Update($keyColumns, $dataColumns);
+   // result:
+   // 1
  
- // $manager->SQL =
- // update TableName
- //   set Name = 'NameValue'
- // where TableName.ID = 1;</pre>
+   // $manager->SQL =
+   // update TableName set
+   //   Name = 'Updated'
+   //
+   // where TableName.Name = 'NameValue'
+ 
+   $keys = new LJCDbColumns();
+   $keys->Add("Name", value: $updateValue);
+   $affectedCount = $manager->Delete($keys);
+ }</pre>
             </td>
           </tr>
         </tbody>

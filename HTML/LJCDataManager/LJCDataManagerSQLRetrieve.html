@@ -43,7 +43,7 @@
           <tr><th class='CodeTable'>PHP</th></tr>
           <tr class='CodeTable'>
             <td class='CodeTable'>
-              public function SQLRetrieve() : ?array
+              public function SQLRetrieve(string $sql): ?array
             </td>
           </tr>
         </tbody>
@@ -52,6 +52,56 @@
     <br />
     <div class='Text'>
       Executes a Select SQL statement.
+    </div>
+    <br />
+    <div class='Text'>Example</div>
+    <br />
+    <div class='SectionContainer'>
+      <table class='CodeTable'>
+        <tbody>
+          <tr class='CodeTable'><th class='CodeTable'>PHP</th></tr>
+          <tr class='CodeTable'>
+            <td class='CodeTable'>
+              <pre style='margin-left: 2px;'>
+ // Executes a Select SQL statement.
+ private static function SQLRetrieve(LJCDataManager $manager)
+ {
+   $nameValue = "NameValue";
+   $methodName = "SQLRetrieve()";
+ 
+   $data = new LJCDbColumns();
+   $data->Add("Name", value: $nameValue);
+   $affectedCount = $manager->Add($data);
+ 
+   // Retrieve with SQLRetrieve().
+   // See constructor for how to create $manager.
+   $keys = new LJCDbColumns();
+   $keys->Add("Name", value: $nameValue);
+   $sql = $manager->RetrieveSQL($keys);
+   $rows = $manager->SQLRetrieve($sql);
+   if (null == $rows
+     || !is_array($rows)
+     || 0 == count($rows))
+   {
+     echo($manager->SQL);
+     echo("\r\n{$methodName} No data retrieved.");
+   }
+ 
+   // $sql =
+   // select
+   //   TableName.ID,
+   //   TableName.Name
+   // from TableName
+   // where TableName.Name = 'NameValue'
+ 
+   $keys = new LJCDbColumns();
+   $keys->Add("Name", value: $nameValue);
+   $affectedCount = $manager->Delete($keys);
+ }</pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
     <br />
     <div class="SmallText">

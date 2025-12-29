@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<!-- Copyright(c) Lester J. Clark and Contributors. -->
+<!-- Licensed under the MIT License.-->
+<!-- LJCHTMLGetHTMLHead.html -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>GetHTMLHead</title>
+  <meta charset="utf-8" />
+  <meta name="author" content="Lester J. Clark" />
+  <meta name="keywords" content="LJCCodeDoc, CodeDoc, Function, PHP" />
+  <meta name="description" content="PHP Function code documentation." />
+  <meta name="viewport" content="width=device-width" , initial-scale=1 />
+  <link rel='stylesheet' type='text/css' href='../../CSS/CodeDoc.css' />
+</head>
+<body style="background: #F0F5FF">
+  <div style="margin-left: 15px; margin-right: 10px">
+    <br />
+    <div class="PathText">
+      / <a href="../../LJCPHPCodeDoc.html#GenCodeDocLib">LJCPHPCodeDoc</a>
+      / <a href="../LJCHTMLLib.html">LJCHTMLLib</a>
+      / <a href="LJCHTML.html">LJCHTML</a>
+      / GetHTMLHead
+    </div>
+    <br />
+    <div id='Header'>
+      <div id='Title'>Function GetHTMLHead</div>
+    </div>
+    <br />
+    <div id='Title'>Parameters</div>
+    <div class='Text'>$textState - The current text state values.</div>
+    <div class='Text'>$title - The page title.</div>
+    <div class='Text'>$author - The author.</div>
+    <div class='Text'>$description - The description.</div>
+    <br />
+    <div class='Text'>Returns</div>
+    <br />
+    <div class='Text'>
+      The common HTML head elements.
+    </div>
+    <br />
+    <div class='Text'>Syntax</div>
+    <br />
+    <div class='SectionContainer'>
+      <table class='CodeTable'>
+        <tbody>
+          <tr><th class='CodeTable'>PHP</th></tr>
+          <tr class='CodeTable'>
+            <td class='CodeTable'>
+              public static function GetHTMLHead(LJCTextState $textState, string $title = null<br />, string $author = null, string $description = null) : string
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <br />
+    <div class='Text'>
+      Gets the common HTML Head elements.
+    </div>
+    <br />
+    <div class='Text'>Example</div>
+    <br />
+    <div class='SectionContainer'>
+      <table class='CodeTable'>
+        <tbody>
+          <tr class='CodeTable'><th class='CodeTable'>PHP</th></tr>
+          <tr class='CodeTable'>
+            <td class='CodeTable'>
+              <pre style='margin-left: 2px;'>
+ // Gets the main HTML Head elements.
+ public static function GetHTMLHead()
+ {
+   // Root Method Begin
+   $textState = new LJCTextState();
+ 
+   // Example Method:
+   $title = "The Title";
+   $author = "John Q. Smith";
+   $description = "The Description";
+   $result = LJCHTML::GetHTMLHead($textState, $title, $author, $description);
+ 
+   // result:
+   // &lt;title&gt;The Title&lt;/title&gt;r
+   // &lt;meta charset=\"utf-8\" /&gt;>
+   // &lt;meta name="description" content="The Description" /&gt;
+   // &lt;meta name="author" content="John Q. Smith" /&gt;
+   // &lt;meta name="viewport" content="width=device-width initial-scale=1" /&gt;
+ }</pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <br />
+    <div class="SmallText">
+      Copyright &copy Lester J. Clark and Contributors.<br />
+      Licensed under the MIT License.
+    </div>
+  </div>
+</body>
+</html>

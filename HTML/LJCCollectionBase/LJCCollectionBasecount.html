@@ -40,7 +40,7 @@
           <tr><th class='CodeTable'>PHP</th></tr>
           <tr class='CodeTable'>
             <td class='CodeTable'>
-              public function count() : int
+              public function count(): int
             </td>
           </tr>
         </tbody>
@@ -48,7 +48,46 @@
     </div>
     <br />
     <div class='Text'>
-      Allows Count(object).
+      Enables count(object).
+    </div>
+    <br />
+    <div class='Text'>Example</div>
+    <br />
+    <div class='SectionContainer'>
+      <table class='CodeTable'>
+        <tbody>
+          <tr class='CodeTable'><th class='CodeTable'>PHP</th></tr>
+          <tr class='CodeTable'>
+            <td class='CodeTable'>
+              <pre style='margin-left: 2px;'>
+ // The strongly typed collection class.
+ class Names extends LJCCollectionBase
+ {
+   // Adds a string.
+   // This method makes a string collection strongly typed.
+   public function Add(string $text)
+   {
+     $retItem = $this->AddItem($text);
+     return $retItem;
+   }
+ }
+ 
+ // Indicates if a key already exists.
+ private static function HasKey()
+ {
+   $names = new Names();
+   $names->Add("First");
+   $names->Add("Second");
+   $names->Add("Third");
+   $result = count($names);
+ 
+   // result:
+   // 3;
+ }</pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
     <br />
     <div class="SmallText">

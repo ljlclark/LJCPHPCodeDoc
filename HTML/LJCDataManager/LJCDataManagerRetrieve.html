@@ -44,7 +44,7 @@
           <tr><th class='CodeTable'>PHP</th></tr>
           <tr class='CodeTable'>
             <td class='CodeTable'>
-              public function Retrieve(LJCDbColumns $keyColumns<br />, array $propertyNames = null, LJCJoins $joins = null) : ?array
+              public function Retrieve(LJCDbColumns $keyColumns<br />, array $propertyNames = null, LJCJoins $joins = null): ?array
             </td>
           </tr>
         </tbody>
@@ -77,29 +77,40 @@
           <tr class='CodeTable'>
             <td class='CodeTable'>
               <pre style='margin-left: 2px;'>
- include_once "LJCRoot.php";
- $prefix = RelativePrefix();
- include_once "$prefix/LJCPHPCommon/LJCDataManagerLib.php";
- include_once "$prefix/LJCPHPCommon/LJCDBAccessLib.php";
+ // Retrieves the record for the provided values.
+ private static function Retrieve(LJCDataManager $manager)
+ {
+   $nameValue = "NameValue";
+   $methodName = "Retrieve()";
  
- // See constructor for how to create $connectionValues.
- $tableName = "TableName";
- $manager = new LJCDataManager($connectionValues, $tableName);
+   $data = new LJCDbColumns();
+   $data->Add("Name", value: $nameValue);
+   $affectedCount = $manager->Add($data);
  
- $keyColumns = new DbColumns();
- $keyColumns->Add("ID", value:1);
+   // Retrieve the test data.
+   // See constructor for how to create $manager.
+   $keys = new LJCDbColumns();
+   $keys->Add("Name", value: $nameValue);
+   $row = $manager->Retrieve($keys);
+   if (null == $row
+     || !is_array($row)
+     || 0 == count($row))
+   {
+     echo($manager->SQL);
+     echo("\r\n{$methodName} No data retrieved.");
+   }
  
- $propertyNames = [];
- $propertyNames[] = "ID";
- $propertyNames[] = "Name";
- $row = $manager->Retrieve($keyColumns, $propertyNames);
+   // $manager->SQL =
+   // select
+   //   TableName.ID,
+   //   TableName.Name
+   // from TableName
+   // where TableName.Name = 'NameValue'
  
- // $manager->SQL =
- // select
- //   TableName.ID,
- //   TableName.Name
- // from TableName
- // where TableName.ID = 1;</pre>
+   $keys = new LJCDbColumns();
+   $keys->Add("Name", value: $nameValue);
+   $affectedCount = $manager->Delete($keys);
+ }</pre>
             </td>
           </tr>
         </tbody>

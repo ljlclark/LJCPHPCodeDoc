@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<!-- Copyright(c) Lester J. Clark and Contributors. -->
+<!-- Licensed under the MIT License.-->
+<!-- LJCDataManagerLoadSQL.html -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>LoadSQL</title>
+  <meta charset="utf-8" />
+  <meta name="author" content="Lester J. Clark" />
+  <meta name="keywords" content="LJCCodeDoc, CodeDoc, Function, PHP" />
+  <meta name="description" content="PHP Function code documentation." />
+  <meta name="viewport" content="width=device-width" , initial-scale=1 />
+  <link rel='stylesheet' type='text/css' href='../../CSS/CodeDoc.css' />
+</head>
+<body style="background: #F0F5FF">
+  <div style="margin-left: 15px; margin-right: 10px">
+    <br />
+    <div class="PathText">
+      / <a href="../../LJCPHPCodeDoc.html#GenCodeDocLib">LJCPHPCodeDoc</a>
+      / <a href="../LJCDataManagerLib.html">LJCDataManagerLib</a>
+      / <a href="LJCDataManager.html">LJCDataManager</a>
+      / LoadSQL
+    </div>
+    <br />
+    <div id='Header'>
+      <div id='Title'>Function LoadSQL</div>
+    </div>
+    <br />
+    <div id='Title'>Parameters</div>
+    <div class='Text'>$keyColumns - The where clause key columns.</div>
+    <div class='Text'>$propertyNames - The included column property names.</div>
+    <div class='Text'>$joins - _ParamSummary_</div>
+    <div class='Text'>$filter - _ParamSummary_</div>
+    <br />
+    <div class='Text'>Returns</div>
+    <br />
+    <div class='Text'>
+      The Load SQL statement.
+    </div>
+    <br />
+    <div class='Text'>Syntax</div>
+    <br />
+    <div class='SectionContainer'>
+      <table class='CodeTable'>
+        <tbody>
+          <tr><th class='CodeTable'>PHP</th></tr>
+          <tr class='CodeTable'>
+            <td class='CodeTable'>
+              public function LoadSQL(?LJCDbColumns $keyColumns = null<br />, ?array $propertyNames = null, ?LJCJoins $joins = null<br />, ?string $filter = null) : string
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <br />
+    <div class='Text'>
+      Creates the Load SQL.
+    </div>
+    <br />
+    <div class='Text'>Example</div>
+    <br />
+    <div class='SectionContainer'>
+      <table class='CodeTable'>
+        <tbody>
+          <tr class='CodeTable'><th class='CodeTable'>PHP</th></tr>
+          <tr class='CodeTable'>
+            <td class='CodeTable'>
+              <pre style='margin-left: 2px;'>
+ // Creates the Load SQL.
+ private static function LoadSQL(LJCDataManager $manager)
+ {
+   $nameValue = "NameValue";
+   $methodName = "LoadSQL()";
+ 
+   $data = new LJCDbColumns();
+   $data->Add("Name", value: $nameValue);
+   $affectedCount = $manager->Add($data);
+ 
+   // Load with SQLLoad().
+   // See constructor for how to create $manager.
+   $keys = new LJCDbColumns();
+   $keys->Add("Name", value: $nameValue);
+   $result = $manager->LoadSQL($keys);
+ 
+   // result:
+   // $manager->SQL =
+   // select
+   //   TableName.ID,
+   //   TableName.Name
+   // from TableName
+   // where TableName.Name = 'NameValue'
+ 
+   $keys = new LJCDbColumns();
+   $keys->Add("Name", value: $updateValue);
+   $affectedCount = $manager->Delete($keys);
+ }</pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <br />
+    <div class="SmallText">
+      Copyright &copy Lester J. Clark and Contributors.<br />
+      Licensed under the MIT License.
+    </div>
+  </div>
+</body>
+</html>

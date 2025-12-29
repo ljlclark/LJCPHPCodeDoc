@@ -38,7 +38,7 @@
           <tr><th class='CodeTable'>PHP</th></tr>
           <tr class='CodeTable'>
             <td class='CodeTable'>
-              protected function DeleteItem($key, bool $throwError = true) : void
+              protected function DeleteItem($key, bool $throwError = true): void
             </td>
           </tr>
         </tbody>
@@ -58,12 +58,45 @@
           <tr class='CodeTable'>
             <td class='CodeTable'>
               <pre style='margin-left: 2px;'>
- include_once "LJCRoot.php";
- $prefix = RelativePrefix();
- include_once "$prefix/LJCPHPCommon/LJCCollectionLib.php";
+ // The strongly typed collection class.
+ class Names extends LJCCollectionBase
+ {
+   // Adds a string.
+   // This method makes a string collection strongly typed.
+   public function Add(string $text)
+   {
+     $retItem = $this->AddItem($text);
+     return $retItem;
+   }
  
- // $collection extends LJCCollectionBase
- $collection->Remove("KeyName");</pre>
+   // Remove the item by Key value.
+   public function Remove($key, bool $throwError = true)
+   {
+     $this->DeleteItem($key, $throwError);
+   }
+ 
+   // Retrieves the item by index.
+   public function RetrieveAtIndex($index)
+   {
+     $retItem = $this->RetrieveItemAtIndex($index);
+     return $retItem;
+   }
+ }
+ 
+ // Deletes an item.
+ public function DeleteItem()
+ {
+   $names = new Names();
+   $names->Add("First");
+   $names->Add("Second");
+   $names->Add("Third");
+ 
+   $this->Remove(0);
+   $result = $names->RetrieveItemAtIndex(0);
+ 
+   // result:
+   // Second
+ }</pre>
             </td>
           </tr>
         </tbody>

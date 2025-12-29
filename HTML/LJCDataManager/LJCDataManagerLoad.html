@@ -29,6 +29,8 @@
     <div id='Title'>Parameters</div>
     <div class='Text'>$keyColumns - The where clause key columns.</div>
     <div class='Text'>$propertyNames - The included column property names.</div>
+    <div class='Text'>$joins - _ParamSummary_</div>
+    <div class='Text'>$filter - _ParamSummary_</div>
     <br />
     <div class='Text'>Returns</div>
     <br />
@@ -44,7 +46,7 @@
           <tr><th class='CodeTable'>PHP</th></tr>
           <tr class='CodeTable'>
             <td class='CodeTable'>
-              public function Load(?LJCDbColumns $keyColumns, array $propertyNames = null<br />, LJCJoins $joins = null)	: ?array
+              public function Load(?LJCDbColumns $keyColumns = null<br />, ?array $propertyNames = null, ?LJCJoins $joins = null<br />, ?string $filter = null): ?array
             </td>
           </tr>
         </tbody>
@@ -77,25 +79,40 @@
           <tr class='CodeTable'>
             <td class='CodeTable'>
               <pre style='margin-left: 2px;'>
- include_once "LJCRoot.php";
- $prefix = RelativePrefix();
- include_once "$prefix/LJCPHPCommon/LJCDataManagerLib.php";
- include_once "$prefix/LJCPHPCommon/LJCDBAccessLib.php";
+ // Loads the records for the provided values.
+ private static function Load(LJCDataManager $manager)
+ {
+   $nameValue = "NameValue";
+   $methodName = "Load()";
  
- // See constructor for how to create $connectionValues.
- $tableName = "TableName";
- $manager = new LJCDataManager($connectionValues, $tableName);
+   $data = new LJCDbColumns();
+   $data->Add("Name", value: $nameValue);
+   $affectedCount = $manager->Add($data);
  
- $propertyNames = [];
- $propertyNames[] = "ID";
- $propertyNames[] = "Name";
- $affectedCount = $manager->Load(null, $propertyNames);
+   // Load the test data.
+   // See constructor for how to create $manager.
+   $keys = new LJCDbColumns();
+   $keys->Add("Name", value: $nameValue);
+   $rows = $manager->Load($keys);
+   if (null == $rows
+     || !is_array($rows)
+     || 0 == count($rows))
+   {
+     echo($manager->SQL);
+     echo("\r\n{$methodName} No data retrieved.");
+   }
  
- // $manager->SQL =
- // select
- //   TableName.ID,
- //   TableName.Name
- // from TableName;</pre>
+   // $manager->SQL =
+   // select
+   //   TableName.ID,
+   //   TableName.Name
+   // from TableName
+   // where TableName.Name = 'NameValue'
+ 
+   $keys = new LJCDbColumns();
+   $keys->Add("Name", value: $nameValue);
+   $affectedCount = $manager->Delete($keys);
+ }</pre>
             </td>
           </tr>
         </tbody>

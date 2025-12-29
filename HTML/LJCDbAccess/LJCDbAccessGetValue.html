@@ -33,7 +33,7 @@
     <div class='Text'>Returns</div>
     <br />
     <div class='Text'>
-      The data value.
+      The data value if the element exists; otherwise null.
     </div>
     <br />
     <div class='Text'>Syntax</div>
@@ -44,7 +44,7 @@
           <tr><th class='CodeTable'>PHP</th></tr>
           <tr class='CodeTable'>
             <td class='CodeTable'>
-              public static function GetValue(array $row, string $columnName)
+              public static function GetValue(?array $row, string $columnName)
             </td>
           </tr>
         </tbody>
@@ -52,13 +52,7 @@
     </div>
     <br />
     <div class='Text'>
-      Returns a data value if the element exists, otherwise returns null.
-    </div>
-    <br />
-    <div class='Text'>Remarks</div>
-    <br />
-    <div class='Text'>
-      Returns null if the element does not exist.
+      Returns a data value if the element exists.
     </div>
     <br />
     <div class='Text'>Example</div>
@@ -70,18 +64,22 @@
           <tr class='CodeTable'>
             <td class='CodeTable'>
               <pre style='margin-left: 2px;'>
- include_once "LJCRoot.php";
- $prefix = RelativePrefix();
- include_once "$prefix/LJCPHPCommon/LJCDBAccessLib.php";
+ // Returns a data value if the element exists.
+ private static function GetValue(LJCConnectionValues $connectionValues)
+ {
+   // See constructor for how to create $connectionValues.
+   $dbAccess = new LJCDbAccess($connectionValues);
  
- // See constructor for how to create $connectionValues.
- $dbAccess = new LJCDbAccess($connectionValues);
+   $tableName = "TableName";
+   $sql = "select ID, Name from {$tableName} where ID = 1";
+   $row = $dbAccess->Retrieve($sql);
+   $id = LJCDbAccess::GetValue($row, "ID");
+   $name = LJCDbAccess::GetValue($row, "Name");
+   $result = "{$id}, {$name}";
  
- $tableName = "TableName";
- $sql = "select ID, Name from $tableName where ID = 1";
- $row = $dbAccess->Retrieve($sql);
- $id = LJCDbAccess::GetValue($row, "ID");
- $name = LJCDbAccess::GetValue($row, "Name");</pre>
+   // result:
+   // 1, Name
+ }</pre>
             </td>
           </tr>
         </tbody>

@@ -64,21 +64,51 @@
           <tr class='CodeTable'>
             <td class='CodeTable'>
               <pre style='margin-left: 2px;'>
- include_once "LJCRoot.php";
- $prefix = RelativePrefix();
- include_once "$prefix/LJCPHPCommon/LJCCollectionLib.php";
+ // The data object class.
+ class Name
+ {
+   public string $Name;
+ }
+ 
+ // The strongly typed collection class.
+ class Names Extends LJCCollectionBase
+ {
+   // Adds an object and key value.
+   // This method makes a collection strongly typed.
+   // The key defaults to a unique object property.
+   public function AddObject(Name $item, $key = null): Name
+   {
+     $retItem = $item;
+ 
+     if ($item != null)
+     {
+       if (null == $key
+         && property_exists($item, "Name")
+         && $item->Name != null
+         && strlen(trim($item->Name)) > 0)
+       {
+         $key = $item->Name;
+       }
+       $retItem = $this-><b>AddItem</b>($item, $key);
+     }
+     return $retItem;
+   }
+ }
  
  // Add to class that extends LJCCollectionBase
  // Adds an object and key value.
- public function AddObject(ObjectItem $item, $key = null)
+ public function AddObject(Name $item, $key = null)
  {
-   if (null == $key)
-   {
-     $key = $item->Name;
-   }
-   $retValue = $this-><b>AddItem</b>($item, $key);
-  return $retValue;
-}</pre>
+   $names = new Names();
+   $name = new Name();
+   $name->Name = "One";
+   $names->AddObject($name);
+   $item = $names->Retrieve("One");
+   $result = $item->Name;
+ 
+   // result:
+   // One
+ }</pre>
             </td>
           </tr>
         </tbody>

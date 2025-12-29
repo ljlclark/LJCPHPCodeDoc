@@ -52,7 +52,7 @@
     </div>
     <br />
     <div class='Text'>
-      Get the item by Key value.
+      Retrieves the item by Key value.
     </div>
     <br />
     <div class='Text'>Example</div>
@@ -64,16 +64,36 @@
           <tr class='CodeTable'>
             <td class='CodeTable'>
               <pre style='margin-left: 2px;'>
- include_once "LJCRoot.php";
- $prefix = RelativePrefix();
- include_once "$prefix/LJCPHPCommon/LJCCollectionLib.php";
- 
- // Add to class that extends LJCCollectionBase
- // Retrieves the item by Key value.
- public function Retrieve($key)
+ // The strongly typed collection class.
+ class Names extends LJCCollectionBase
  {
-   $retValue = $this-><b>RetrieveItem</b>($key, $throwError);
-   return $retValue;
+   // Adds a string.
+   // This method makes a string collection strongly typed.
+   public function Add(string $text)
+   {
+     $retItem = $this->AddItem($text);
+     return $retItem;
+   }
+ 
+   // Retrieves the item by Key value.
+   public function Retrieve($key, bool $throwError = true)
+   {
+     $retItem = $this->RetrieveItem($key, $throwError);
+     return $retItem;
+   }
+ }
+ 
+ // Retrieves the item by Key value.
+ private static function RetrieveItem()
+ {
+   $names = new Names();
+   $names->Add("First");
+   $names->Add("Second");
+   $names->Add("Third");
+   $result = $names->Retrieve(0);
+ 
+   // result:
+   // First
  }</pre>
             </td>
           </tr>

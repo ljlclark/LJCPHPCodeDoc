@@ -76,27 +76,54 @@
           <tr class='CodeTable'>
             <td class='CodeTable'>
               <pre style='margin-left: 2px;'>
- include_once "LJCRoot.php";
- $prefix = RelativePrefix();
- include_once "$prefix/LJCPHPCommon/LJCDBAccessLib.php";
- 
- // See constructor for how to create $connectionValues.
- $manager = new LJCDataManager($connectionValues, "TableName");
- 
- class Person
+ class Item
  {
+   public function __construct()
+   {
+     $this->ID = 0;
+     $this->Name = "";
+   }
+ 
+   // Creates an object clone.
+   public function Clone(): self
+   {
+     $retValue = new self();
+ 
+     $retValue->ID = $this->ID;
+     $retValue->Name = $this->Name;
+     return $retValue;
+   } // Clone()
+ 
    public int $ID;
-   public ?string $Name;
+   public string $PropertyName;
  }
  
- $keyColumns = new LJCDbColumns();
- $keyColumns->Add("ID", value: 1);
- $row = $manager->Retrieve($keyColumns);
+ // Populates a Data Object with values from a Data Result row.
+ private static function CreateDataObject(LJCDataManager $manager)
+ {
+   $methodName = "CreateDataObject";
  
- $dataObject = new Person();
- $person = $manager->CreateDataObject($dataObject, $row);
- echo $person->ID;
- echo $person->Name;</pre>
+   $rows = $manager->Load();
+   $row = $rows[0];
+   $id = LJCDbAccess::GetValue($row, "ID");
+   $name = LJCDbAccess::GetValue($row, "Name");
+ 
+   // result:
+   // $id = First row ID column value.
+   // $name = First row Name column value.
+ 
+   // See constructor for how to create $manager.
+   $item = new Item();
+   $item = $manager->CreateDataObject($item, $row);
+   if (null == $item)
+   {
+     echo("\$item was not created.");
+   }
+ 
+   // result:
+   // $item->ID = First item ID column value.
+   // $item->Name = First item Name column value.
+ }</pre>
             </td>
           </tr>
         </tbody>

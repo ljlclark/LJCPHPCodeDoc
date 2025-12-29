@@ -63,16 +63,22 @@
           <tr class='CodeTable'>
             <td class='CodeTable'>
               <pre style='margin-left: 2px;'>
- include_once "LJCRoot.php";
- $prefix = RelativePrefix();
- include_once "$prefix/LJCPHPCommon/LJCDBAccessLib.php";
+ // Loads the records for the provided SQL statement.
+ private static function Load(LJCConnectionValues $connectionValues)
+ {
+   // See constructor for how to create $connectionValues.
+   $dbAccess = new LJCDbAccess($connectionValues);
  
- // See constructor for how to create $connectionValues.
- $dbAccess = new LJCDbAccess($connectionValues);
- 
- $tableName = "TableName";
- $sql = "select * from $tableName";
- $rows = $dbAccess->Load($sql);</pre>
+   $tableName = "TableName";
+   $sql = "select * from {$tableName};";
+   $rows = $dbAccess->Load($sql);
+   if (null == $rows
+     || (is_array($rows)
+     && count($rows) == 0))
+   {
+     echo("\r\nLoad() rows not found");
+   }
+ }</pre>
             </td>
           </tr>
         </tbody>

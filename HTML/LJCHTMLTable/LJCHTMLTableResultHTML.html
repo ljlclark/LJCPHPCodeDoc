@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<!-- Copyright(c) Lester J. Clark and Contributors. -->
+<!-- Licensed under the MIT License.-->
+<!-- LJCHTMLTableResultHTML.html -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>ResultHTML</title>
+  <meta charset="utf-8" />
+  <meta name="author" content="Lester J. Clark" />
+  <meta name="keywords" content="LJCCodeDoc, CodeDoc, Function, PHP" />
+  <meta name="description" content="PHP Function code documentation." />
+  <meta name="viewport" content="width=device-width" , initial-scale=1 />
+  <link rel='stylesheet' type='text/css' href='../../CSS/CodeDoc.css' />
+</head>
+<body style="background: #F0F5FF">
+  <div style="margin-left: 15px; margin-right: 10px">
+    <br />
+    <div class="PathText">
+      / <a href="../../LJCPHPCodeDoc.html#GenCodeDocLib">LJCPHPCodeDoc</a>
+      / <a href="../LJCHTMLTableLib.html">LJCHTMLTableLib</a>
+      / <a href="LJCHTMLTable.html">LJCHTMLTable</a>
+      / ResultHTML
+    </div>
+    <br />
+    <div id='Header'>
+      <div id='Title'>Function ResultHTML</div>
+    </div>
+    <br />
+    <div id='Title'>Parameters</div>
+    <div class='Text'>$dataItems - The array of row arrays.</div>
+    <div class='Text'>$textState - The text state object.</div>
+    <div class='Text'>$maxRows - The number of rows to display.</div>
+    <br />
+    <div class='Text'>Returns</div>
+    <br />
+    <div class='Text'>
+      The HTML table.
+    </div>
+    <br />
+    <div class='Text'>Syntax</div>
+    <br />
+    <div class='SectionContainer'>
+      <table class='CodeTable'>
+        <tbody>
+          <tr><th class='CodeTable'>PHP</th></tr>
+          <tr class='CodeTable'>
+            <td class='CodeTable'>
+              public function ResultHTML(array $rows, LJCTextState $textState): string
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <br />
+    <div class='Text'>
+      Create an HTML table from result rows.
+    </div>
+    <br />
+    <div class='Text'>Example</div>
+    <br />
+    <div class='SectionContainer'>
+      <table class='CodeTable'>
+        <tbody>
+          <tr class='CodeTable'><th class='CodeTable'>PHP</th></tr>
+          <tr class='CodeTable'>
+            <td class='CodeTable'>
+              <pre style='margin-left: 2px;'>
+ declare(strict_types=1);
+ include_once "LJCRoot.php";
+ $prefix = RelativePrefix();
+ include_once "$prefix/LJCPHPCommon/LJCDataManagerLib.php";
+ include_once "$prefix/LJCPHPCommon/LJCTextBuilderLib.php";
+ include_once "$prefix/LJCPHPCommon/LJCHTMLTableLib.php";
+ // LJCDataManagerLib: LJCConnectionValues, LJCDataManager
+ // LJCTextBuilderLib: LJCAttribute, LJCAttributes, LJCTextBuilder
+ //   , LJCTextState
+ // LJCHTMLTableLib: LJCHTMLTable
+ 
+ // Get Result table.
+ private static function GetResultsTable(LJCTextState $textState)
+ {
+   $database = "DatabaseName";
+   $userID = "UserID";
+   $password = "Password";
+   $connectionValues = new LJCConnectionValues("localhost", $database, $userID
+     , $password);
+   $tableName = "Province";
+   $manager = new LJCDataManager($connectionValues, $tableName);
+ 
+   // Retrieves all column values.
+   $rows = $manager->Load();
+ 
+   $propertyNames = $manager->PropertyNames();
+   $ht = new LJCHTMLTable();
+   $ht->ColumnNames = $propertyNames;
+   $tb = new LJCTextBuilder();
+   $ht->TableAttribs = $tb->TableAttribs();
+   $result = $ht->ResultHTML($rows, $textState);
+ }</pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <br />
+    <div class="SmallText">
+      Copyright &copy Lester J. Clark and Contributors.<br />
+      Licensed under the MIT License.
+    </div>
+  </div>
+</body>
+</html>

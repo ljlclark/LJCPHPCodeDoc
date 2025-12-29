@@ -40,7 +40,7 @@
           <tr><th class='CodeTable'>PHP</th></tr>
           <tr class='CodeTable'>
             <td class='CodeTable'>
-              public function GetKeys() : array
+              public function GetKeys(): array
             </td>
           </tr>
         </tbody>
@@ -49,6 +49,46 @@
     <br />
     <div class='Text'>
       Gets an indexed array of keys.
+    </div>
+    <br />
+    <div class='Text'>Example</div>
+    <br />
+    <div class='SectionContainer'>
+      <table class='CodeTable'>
+        <tbody>
+          <tr class='CodeTable'><th class='CodeTable'>PHP</th></tr>
+          <tr class='CodeTable'>
+            <td class='CodeTable'>
+              <pre style='margin-left: 2px;'>
+ // The strongly typed collection class.
+ class Names extends LJCCollectionBase
+ {
+   // Adds a string.
+   // This method makes a string collection strongly typed.
+   public function Add(string $text)
+   {
+     $retItem = $this->AddItem($text);
+     return $retItem;
+   }
+ }
+ 
+ // Gets an indexed array of keys.
+ private static function GetKeys()
+ {
+   $names = new Names();
+   $names->Add("First");
+   $names->Add("Second");
+   $names->Add("Third");
+   $values = $names->GetKeys();
+   $result = join(",", $values);
+ 
+   // result:
+   // 0,1,2
+ }</pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
     <br />
     <div class="SmallText">

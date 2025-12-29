@@ -63,16 +63,53 @@
           <tr class='CodeTable'>
             <td class='CodeTable'>
               <pre style='margin-left: 2px;'>
- include_once "LJCRoot.php";
- $prefix = RelativePrefix();
- include_once "$prefix/LJCPHPCommon/LJCDBAccessLib.php";
+ // Executes a non-query sql statement.
+ public function Execute(LJCConnectionValues $connectionValues): int
+ {
+   // See constructor for how to create $connectionValues.
+   $dbAccess = new LJCDbAccess($connectionValues);
  
- // See constructor for how to create $connectionValues.
- $dbAccess = new LJCDbAccess($connectionValues);
+   $tableName = "TableName";
  
- $tableName = "TableName";
- $sql = "delete from $tableName where ID = 1";
- $affectedCount = $dbAccess->Execute($sql);</pre>
+   // Insert test record.
+   $name = "Test";
+   $sql = "insert into {$tableName}\r\n ";
+   $sql .= "(Name)\r\n ";
+   $sql .= "values('{$name}');";
+   $affectedCount = $dbAccess->Execute($sql);
+   if (0 == $affectedCount)
+   {
+     echo("\r\nExecute() No record inserted.");
+   }
+ 
+   // Retrieve assigned ID.
+   $sql = "select\r\n ";
+   $sql .= "ID, Name\r\n ";
+   $sql .= "from {$tableName}\r\n ";
+   $sql .= "where Name = '{$name}';";
+   $row = $dbAccess->Retrieve($sql);
+   if ($row == null)
+   {
+     echo("\r\nExecute() select row not found");
+   }
+   $id = LJCDbAccess::GetValue($row, "ID");
+   if ($id == null)
+   {
+     echo("\r\nExecute() ID not found");
+   }
+ 
+   // Delete test record.
+   if ($id != null)
+   {
+     $sql = "delete from {$tableName}\r\n ";
+     $sql .= "where ID = {$id};";
+     $affectedCount = $dbAccess->Execute($sql);
+     if (0 == $affectedCount)
+     {
+       echo("\r\nExecute() No record found to delete.");
+     }
+   }
+ }</pre>
             </td>
           </tr>
         </tbody>

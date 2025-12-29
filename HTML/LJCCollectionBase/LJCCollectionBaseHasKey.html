@@ -43,7 +43,7 @@
           <tr><th class='CodeTable'>PHP</th></tr>
           <tr class='CodeTable'>
             <td class='CodeTable'>
-              public function HasKey($key) : bool
+              public function HasKey($key): bool
             </td>
           </tr>
         </tbody>
@@ -63,15 +63,30 @@
           <tr class='CodeTable'>
             <td class='CodeTable'>
               <pre style='margin-left: 2px;'>
- include_once "LJCRoot.php";
- $prefix = RelativePrefix();
- include_once "$prefix/LJCPHPCommon/LJCCollectionLib.php";
- 
- // $collection extends LJCCollectionBase
- $key = "KeyName";
- if ($collection->HasKey($key))
+ // The strongly typed collection class.
+ class Names extends LJCCollectionBase
  {
-   throw new Exception("Key: {$key} already in use.");
+   // Adds a string.
+   // This method makes a string collection strongly typed.
+   public function Add(string $text)
+   {
+     $retItem = $this->AddItem($text);
+     return $retItem;
+   }
+ }
+ 
+ // Indicates if a key already exists.
+ private static function HasKey()
+ {
+   $names = new Names();
+   $names->Add("First");
+   $names->Add("Second");
+   $names->Add("Third");
+   $value = $names->HasKey(0);
+   $result = $value ? "true" : "false";
+ 
+   // result:
+   // true;
  }</pre>
             </td>
           </tr>

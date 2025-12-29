@@ -64,18 +64,22 @@
           <tr class='CodeTable'>
             <td class='CodeTable'>
               <pre style='margin-left: 2px;'>
- include_once "LJCRoot.php";
- $prefix = RelativePrefix();
- include_once "$prefix/LJCPHPCommon/LJCDBAccessLib.php";
- 
- // See constructor for how to create $connectionValues.
- $dbAccess = new LJCDbAccess($connectionValues);
- 
- $tableName = "TableName";
- $dbColumns = $dbAccess->LoadTableSchema($database, $tableName);
- if (count($dbColumns) > 0)
+ // Returns the Table Schema DbColumns collection.
+ private static function LoadTableSchema(
+     LJCConnectionValues $connectionValues)
  {
-   // Use DbColumns data definitions.
+   // See constructor for how to create $connectionValues.
+   $dbAccess = new LJCDbAccess($connectionValues);
+ 
+   $dbName = "DatabaseName";
+   $tableName = "TableName";
+   $schema = $dbAccess->LoadTableSchema($dbName, $tableName);
+   if (null == $schema
+     || !$schema instanceof LJCDbColumns
+     || count($schema) == 0)
+   {
+     echo("\r\nLoadTableSchema() The Schema was not retrieved.");
+   }
  }</pre>
             </td>
           </tr>

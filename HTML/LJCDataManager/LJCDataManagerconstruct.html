@@ -63,10 +63,11 @@
  include_once "$prefix/LJCPHPCommon/LJCDataManagerLib.php";
  include_once "$prefix/LJCPHPCommon/LJCDBAccessLib.php";
  
- $database = "DatabaseName";
+ $dbServer = "localhost";
+ $dbName = "DatabaseName";
  $userID = "UserID";
  $password = "Password":
- $connectionValues = new LJCConnectionValues("localhost", $database, $userID
+ $connectionValues = new LJCConnectionValues($dbServer, $dbName, $userID
    , $password);
  
  $tableName = "TableName";

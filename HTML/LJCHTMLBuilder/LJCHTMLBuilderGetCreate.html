@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+<!-- Copyright(c) Lester J. Clark and Contributors. -->
+<!-- Licensed under the MIT License.-->
+<!-- LJCHTMLBuilderGetCreate.html -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>GetCreate</title>
+  <meta charset="utf-8" />
+  <meta name="author" content="Lester J. Clark" />
+  <meta name="keywords" content="LJCCodeDoc, CodeDoc, Function, PHP" />
+  <meta name="description" content="PHP Function code documentation." />
+  <meta name="viewport" content="width=device-width" , initial-scale=1 />
+  <link rel='stylesheet' type='text/css' href='../../CSS/CodeDoc.css' />
+</head>
+<body style="background: #F0F5FF">
+  <div style="margin-left: 15px; margin-right: 10px">
+    <br />
+    <div class="PathText">
+      / <a href="../../LJCPHPCodeDoc.html#GenCodeDocLib">LJCPHPCodeDoc</a>
+      / <a href="../LJCHTMLBuilderLib.html">LJCHTMLBuilderLib</a>
+      / <a href="LJCHTMLBuilder.html">LJCHTMLBuilder</a>
+      / GetCreate
+    </div>
+    <br />
+    <div id='Header'>
+      <div id='Title'>Function GetCreate</div>
+    </div>
+    <br />
+    <div id='Title'>Parameters</div>
+    <div class='Text'>$name - The element name.</div>
+    <div class='Text'>$text - The element content text.</div>
+    <div class='Text'>$textState - The current text state values.</div>
+    <div class='Text'>$htmlAttribs - The element attributes.</div>
+    <div class='Text'>$addIndent - _ParamSummary_</div>
+    <div class='Text'>$childIndent - _ParamSummary_</div>
+    <div class='Text'>$isEmpty - Indicates if an empty element.</div>
+    <div class='Text'>$close - Indicates if the element will be closed.</div>
+    <br />
+    <div class='Text'>Returns</div>
+    <br />
+    <div class='Text'>
+      The HTML element.
+    </div>
+    <br />
+    <div class='Text'>Syntax</div>
+    <br />
+    <div class='SectionContainer'>
+      <table class='CodeTable'>
+        <tbody>
+          <tr><th class='CodeTable'>PHP</th></tr>
+          <tr class='CodeTable'>
+            <td class='CodeTable'>
+              public function GetCreate(string $name, string $text<br />, LJCTextState $textState, LJCAttributes $attribs = null<br />, bool $addIndent = true, bool $childIndent = true, bool $isEmpty = false<br />, bool $close = true): string
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <br />
+    <div class='Text'>
+      Gets an element.
+    </div>
+    <br />
+    <div class='Text'>Remarks</div>
+    <br />
+    <div class='Text'>
+      GetCreate() is a "GetText" method which creates the element or element
+ opening tag and returns the text value. It is called from other element
+ create methods.<br />
+ The addIndent parameter defaults to true, which starts the text with the
+ current indent string.<br />
+ The isEmpty element defaults to false, which does not add the empty
+ element slash.<br />
+ If isEmpty is true, the empty element slash is added and the close
+ parameter is ignored. The element will not include the closing tag.
+ <br />
+ The ChildIndentCount is incremented if the element is not empty and
+ not closed.
+    </div>
+    <br />
+    <div class='Text'>Example</div>
+    <br />
+    <div class='SectionContainer'>
+      <table class='CodeTable'>
+        <tbody>
+          <tr class='CodeTable'><th class='CodeTable'>PHP</th></tr>
+          <tr class='CodeTable'>
+            <td class='CodeTable'>
+              <pre style='margin-left: 2px;'>
+ // Root Method Begin
+ $textState = new LJCTextState();
+ 
+ // Defaults: IndentCharCount = 2, LineLimit = 80, WrapEnabled = false.
+ $hb = new HTMLBuilder($textState);
+ 
+ // Example Method:
+ // Defaults: close = true.
+ $hb->Create("head", null, $textState);
+ $result = $hb->ToString();
+ 
+ // result:
+ // &lt;head&gt;&lt;/head&gt;</pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <br />
+    <div class="SmallText">
+      Copyright &copy Lester J. Clark and Contributors.<br />
+      Licensed under the MIT License.
+    </div>
+  </div>
+</body>
+</html>

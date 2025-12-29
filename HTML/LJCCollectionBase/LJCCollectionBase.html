@@ -55,19 +55,22 @@
  </p>
  <p>
  A strongly typed collection class would extend (inherit) from this base
- class  and add an AddObject() method that would require the strongly typed
- object collection element. This is what makes the collection strongly
- typed.
+ class  and include an AddObject() method that would require the strongly typed
+ object collection item. This is what makes the collection strongly typed.
  </p>
  <p>
- The strongly typed collection class would also provide a Get() method
+ The strongly typed collection class would also provide a Retrieve() method
  that could retrieve the internal array element by key.
  </p>
  For an example of how this works, see class: LJCDBAccessLib-LJCDbColumns.
+ Use this code to include the Collection lib classes.
     </div>
     <br />
     <div id='Title'>Public Functions</div>
     <table class='ListTable'>
+    </table>
+    <div class="Title2">Data Methods</div>
+    <table class="ListTable">
       <tr>
         <td class='ListTable' width='25%'><a href='LJCCollectionBaseAddItem.html'>AddItem</a></td>
         <td class='ListTable'>
@@ -77,7 +80,7 @@
       <tr>
         <td class='ListTable' width='25%'><a href='LJCCollectionBaseClearItems.html'>ClearItems</a></td>
         <td class='ListTable'>
-          _FunctionSummary_
+          Clears the collection items.
         </td>
       </tr>
       <tr>
@@ -89,9 +92,18 @@
       <tr>
         <td class='ListTable' width='25%'><a href='LJCCollectionBaseRetrieveItem.html'>RetrieveItem</a></td>
         <td class='ListTable'>
-          Get the item by Key value.
+          Retrieves the item by Key value.
         </td>
       </tr>
+      <tr>
+        <td class='ListTable' width='25%'><a href='LJCCollectionBaseRetrieveItemAtIndex.html'>RetrieveItemAtIndex</a></td>
+        <td class='ListTable'>
+          Retrieves the item by index.
+        </td>
+      </tr>
+    </table>
+    <div class="Title2">Other Methods</div>
+    <table class="ListTable">
       <tr>
         <td class='ListTable' width='25%'><a href='LJCCollectionBaseGetKeys.html'>GetKeys</a></td>
         <td class='ListTable'>
@@ -113,17 +125,17 @@
       <tr>
         <td class='ListTable' width='25%'><a href='LJCCollectionBasecount.html'>count</a></td>
         <td class='ListTable'>
-          Allows Count(object).
+          Enables count(object).
         </td>
       </tr>
       <tr>
         <td class='ListTable' width='25%'><a href='LJCCollectionBasegetIterator.html'>getIterator</a></td>
         <td class='ListTable'>
-          Allows foreach()
+          Enables foreach().
         </td>
       </tr>
     </table>
-    <div class='Text'>9 Functions</div>
+    <div class='Text'>10 Functions</div>
     <br />
     <div id='Title'>Public Properties</div>
     <table class='ListTable'>

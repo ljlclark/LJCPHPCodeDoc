@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<!-- Copyright(c) Lester J. Clark and Contributors. -->
+<!-- Licensed under the MIT License.-->
+<!-- LJCDataManagerColumns.html -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Columns</title>
+  <meta charset="utf-8" />
+  <meta name="author" content="Lester J. Clark" />
+  <meta name="keywords" content="LJCCodeDoc, CodeDoc, Function, PHP" />
+  <meta name="description" content="PHP Function code documentation." />
+  <meta name="viewport" content="width=device-width" , initial-scale=1 />
+  <link rel='stylesheet' type='text/css' href='../../CSS/CodeDoc.css' />
+</head>
+<body style="background: #F0F5FF">
+  <div style="margin-left: 15px; margin-right: 10px">
+    <br />
+    <div class="PathText">
+      / <a href="../../LJCPHPCodeDoc.html#GenCodeDocLib">LJCPHPCodeDoc</a>
+      / <a href="../LJCDataManagerLib.html">LJCDataManagerLib</a>
+      / <a href="LJCDataManager.html">LJCDataManager</a>
+      / Columns
+    </div>
+    <br />
+    <div id='Header'>
+      <div id='Title'>Function Columns</div>
+    </div>
+    <br />
+    <div id='Title'>Parameters</div>
+    <div class='Text'>$propertyNames - The included column property names.</div>
+    <br />
+    <div class='Text'>Syntax</div>
+    <br />
+    <div class='SectionContainer'>
+      <table class='CodeTable'>
+        <tbody>
+          <tr><th class='CodeTable'>PHP</th></tr>
+          <tr class='CodeTable'>
+            <td class='CodeTable'>
+              public function Columns(array $propertyNames = null): LJCDbColumns
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <br />
+    <div class='Text'>
+      Get the schema columns that match the property names.
+    </div>
+    <br />
+    <div class='Text'>Example</div>
+    <br />
+    <div class='SectionContainer'>
+      <table class='CodeTable'>
+        <tbody>
+          <tr class='CodeTable'><th class='CodeTable'>PHP</th></tr>
+          <tr class='CodeTable'>
+            <td class='CodeTable'>
+              <pre style='margin-left: 2px;'>
+ // Get the column definitions that match the property names.
+ private static function Columns(LJCDataManager $manager)
+ {
+   $propertyNames = [
+     "ID",
+     "Name",
+   ];
+ 
+   // See constructor for how to create $manager.
+   $columns = $manager->Columns($propertyNames);
+   $value = count($columns);
+   $result = strval($value);
+ 
+   // result:
+   // 2
+ 
+   $result = "";
+   foreach ($columns as $column)
+   {
+     if (strlen(trim($result)) > 0)
+     {
+       $result .= ",";
+     }
+     $result .= $column->PropertyName;
+   }
+ 
+   // result:
+   // ID,Name
+ }</pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <br />
+    <div class="SmallText">
+      Copyright &copy Lester J. Clark and Contributors.<br />
+      Licensed under the MIT License.
+    </div>
+  </div>
+</body>
+</html>

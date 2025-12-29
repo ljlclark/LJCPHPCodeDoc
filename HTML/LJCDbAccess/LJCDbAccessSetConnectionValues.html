@@ -60,16 +60,28 @@
           <tr class='CodeTable'>
             <td class='CodeTable'>
               <pre style='margin-left: 2px;'>
- include_once "LJCRoot.php";
- $prefix = RelativePrefix();
- include_once "$prefix/LJCPHPCommon/LJCDBAccessLib.php";
+ // Resets the $ConnectionValues property.
+ private static function SetConnectionValues(
+   LJCConnectionValues $connectionValues)
+ {
+   // See constructor for how to create $connectionValues.
+   $dbAccess = new LJCDbAccess($connectionValues);
  
- // See constructor for how to create $connectionValues.
- $dbAccess = new LJCDbAccess($connectionValues);
- 
- // Change some of the object properties.
- $tableName = "NewTableName";
- $dbAccess->SetConnectionValues($database, $tableName);</pre>
+   $dbServer = "localhost";
+   $dbName = "DatabaseName";
+   $userID = "UserID";
+   $password = "Password";
+   $dbAccess->SetConnectionValues($dbServer, $dbName, $userID, $password);
+   $values = $dbAccess->ConnectionValues;
+   if (null == $values
+     || $values->DbServer != "localhost"
+     || $values->DbName != "DatabaseName"
+     || $values->UserID != "UserID"
+     || $values->Password != "Password")
+   {
+     echo("\r\nSetConnectionValues() Connection values not set correctly.");
+   }
+ }</pre>
             </td>
           </tr>
         </tbody>

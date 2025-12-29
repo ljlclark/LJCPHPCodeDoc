@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<!-- Copyright(c) Lester J. Clark and Contributors. -->
+<!-- Licensed under the MIT License.-->
+<!-- OutputLog.html -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Log</title>
+  <meta charset="utf-8" />
+  <meta name="author" content="Lester J. Clark" />
+  <meta name="keywords" content="LJCCodeDoc, CodeDoc, Function, PHP" />
+  <meta name="description" content="PHP Function code documentation." />
+  <meta name="viewport" content="width=device-width" , initial-scale=1 />
+  <link rel='stylesheet' type='text/css' href='../../CSS/CodeDoc.css' />
+</head>
+<body style="background: #F0F5FF">
+  <div style="margin-left: 15px; margin-right: 10px">
+    <br />
+    <div class="PathText">
+      / <a href="../../LJCPHPCodeDoc.html#GenCodeDocLib">LJCPHPCodeDoc</a>
+      / <a href="../LJCCommonLib.html">LJCCommonLib</a>
+      / <a href="Output.html">Output</a>
+      / Log
+    </div>
+    <br />
+    <div id='Header'>
+      <div id='Title'>Function Log</div>
+    </div>
+    <br />
+    <div id='Title'>Parameters</div>
+    <div class='Text'>$lineNumber - The debug line number.</div>
+    <div class='Text'>$valueName - The value name.</div>
+    <div class='Text'>$value - The value.</div>
+    <div class='Text'>$asObject - Indicates if outputting as an object.</div>
+    <div class='Text'>$output - Indicates if value is output.</div>
+    <br />
+    <div class='Text'>Syntax</div>
+    <br />
+    <div class='SectionContainer'>
+      <table class='CodeTable'>
+        <tbody>
+          <tr><th class='CodeTable'>PHP</th></tr>
+          <tr class='CodeTable'>
+            <td class='CodeTable'>
+              public function Log(int $lineNumber, string $valueName, $value<br />, bool $asObject = false, bool $output = true): string
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <br />
+    <div class='Text'>
+      Outputs the value or object text.
+    </div>
+    <br />
+    <div class='Text'>Example</div>
+    <br />
+    <div class='SectionContainer'>
+      <table class='CodeTable'>
+        <tbody>
+          <tr class='CodeTable'><th class='CodeTable'>PHP</th></tr>
+          <tr class='CodeTable'>
+            <td class='CodeTable'>
+              <pre style='margin-left: 2px;'>
+ // Outputs the value debug text.
+ private static function OutputLog()
+ {
+   $methodName = "OutputLog";
+ 
+   $valueName = "\$value";
+   $value = "Test";
+   $lineNumber = __line__;
+   $output = LJC::OutputLog($lineNumber, $valueName, $value, output: false);
+ 
+   // output:
+   //
+   // 123 $value = Test
+ }</pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <br />
+    <div class="SmallText">
+      Copyright &copy Lester J. Clark and Contributors.<br />
+      Licensed under the MIT License.
+    </div>
+  </div>
+</body>
+</html>

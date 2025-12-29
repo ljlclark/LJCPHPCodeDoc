@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+<!-- Copyright(c) Lester J. Clark and Contributors. -->
+<!-- Licensed under the MIT License.-->
+<!-- LJCDataManagerUpdateSQL.html -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>UpdateSQL</title>
+  <meta charset="utf-8" />
+  <meta name="author" content="Lester J. Clark" />
+  <meta name="keywords" content="LJCCodeDoc, CodeDoc, Function, PHP" />
+  <meta name="description" content="PHP Function code documentation." />
+  <meta name="viewport" content="width=device-width" , initial-scale=1 />
+  <link rel='stylesheet' type='text/css' href='../../CSS/CodeDoc.css' />
+</head>
+<body style="background: #F0F5FF">
+  <div style="margin-left: 15px; margin-right: 10px">
+    <br />
+    <div class="PathText">
+      / <a href="../../LJCPHPCodeDoc.html#GenCodeDocLib">LJCPHPCodeDoc</a>
+      / <a href="../LJCDataManagerLib.html">LJCDataManagerLib</a>
+      / <a href="LJCDataManager.html">LJCDataManager</a>
+      / UpdateSQL
+    </div>
+    <br />
+    <div id='Header'>
+      <div id='Title'>Function UpdateSQL</div>
+    </div>
+    <br />
+    <div id='Title'>Parameters</div>
+    <div class='Text'>$keyColumns - The where clause key columns.</div>
+    <div class='Text'>$dataColumns - The data columns.</div>
+    <br />
+    <div class='Text'>Returns</div>
+    <br />
+    <div class='Text'>
+      The Update SQL statement.
+    </div>
+    <br />
+    <div class='Text'>Syntax</div>
+    <br />
+    <div class='SectionContainer'>
+      <table class='CodeTable'>
+        <tbody>
+          <tr><th class='CodeTable'>PHP</th></tr>
+          <tr class='CodeTable'>
+            <td class='CodeTable'>
+              public function UpdateSQL(LJCDbColumns $keyColumns<br />, LJCDbColumns $dataColumns)
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <br />
+    <div class='Text'>
+      Creates the Update SQL.
+    </div>
+    <br />
+    <div class='Text'>Example</div>
+    <br />
+    <div class='SectionContainer'>
+      <table class='CodeTable'>
+        <tbody>
+          <tr class='CodeTable'><th class='CodeTable'>PHP</th></tr>
+          <tr class='CodeTable'>
+            <td class='CodeTable'>
+              <pre style='margin-left: 2px;'>
+ // Creates the Update SQL.
+ private static function UpdateSQL(LJCDataManager $manager)
+ {
+   $nameValue = "NameValue";
+   $updateValue = "Updated";
+   $methodName = "UpdateSQL()";
+ 
+   $data = new LJCDbColumns();
+   $data->Add("Name", value: $nameValue);
+   $affectedCount = $manager->Add($data);
+ 
+   // Get the Update SQL statement.
+   // See constructor for how to create $manager.
+   $keys = new LJCDbColumns();
+   $keys->Add("Name", value: $nameValue);
+   $data = new LJCDbColumns();
+   $data->Add("Name", value: $updateValue);
+   $result = $manager->UpdateSQL($keys, $data);
+ 
+   // result:
+   // update TableName set
+   //   Name = 'Updated'
+   //
+   // where TableName.Name = 'NameValue'
+ 
+   $keys = new LJCDbColumns();
+   $keys->Add("Name", value: $updateValue);
+   $affectedCount = $manager->Delete($keys)
+ }</pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <br />
+    <div class="SmallText">
+      Copyright &copy Lester J. Clark and Contributors.<br />
+      Licensed under the MIT License.
+    </div>
+  </div>
+</body>
+</html>

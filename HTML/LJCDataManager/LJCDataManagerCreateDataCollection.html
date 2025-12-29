@@ -45,7 +45,7 @@
           <tr><th class='CodeTable'>PHP</th></tr>
           <tr class='CodeTable'>
             <td class='CodeTable'>
-              public function CreateDataCollection(object $collection<br />, object $dataObject, array $rows)
+              public function CreateDataCollection(object $dataCollection<br />, object $dataObject, array $rows)
             </td>
           </tr>
         </tbody>
@@ -87,26 +87,84 @@
           <tr class='CodeTable'>
             <td class='CodeTable'>
               <pre style='margin-left: 2px;'>
- include_once "LJCRoot.php";
- $prefix = RelativePrefix();
- include_once "$prefix/LJCPHPCommon/LJCDataManagerLib.php";
- 
- // See constructor for how to create $connectionValues.
- $manager = new LJCDataManager($connectionValues, "TableName");
- 
- class Person
+ class Item
  {
-    public int $ID;
-   public string $Name;
+   public function __construct()
+   {
+     $this->ID = 0;
+     $this->Name = "";
+   }
+ 
+   // Creates an object clone.
+   public function Clone(): self
+   {
+     $retValue = new self();
+ 
+     $retValue->ID = $this->ID;
+     $retValue->Name = $this->Name;
+     return $retValue;
+   } // Clone()
+ 
+   public int $ID;
+   public string $PropertyName;
  }
  
- $rows = $manager->Load(null);
- $persons = $manager->CreateDataCollection(new Persons(), new Person()
-   , $rows);
- foreach ($persons as $person)
+ class Items extends LJCCollectionBase
  {
-   echo $person->ID;
-   echo $person->Name;
+   // Adds an object and key value.
+   public function AddObject(Item $item, $key = null): ?Item
+   {
+     $methodName = "AddObject()";
+ 
+     if (null == $key)
+     {
+       $key = $item->Name;
+     }
+ 
+     // AddItem() is in LJCCollectionBase.
+     $retItem = $this->AddItem($item, $key);
+     return $retItem;
+   } // AddObject()
+ 
+   // Retrieves the item by index.
+   public function RetrieveAtIndex($index)
+   {
+     $retItem = $this->RetrieveItemAtIndex($index);
+     return $retItem;
+   }
+ }
+ 
+ // Creates an array of Data Objects from a Data Result rows array.
+ private static function CreateDataCollection(LJCDataManager $manager)
+ {
+   $methodName = "CreateDataCollection";
+ 
+   $rows = $manager->Load();
+   $row = $rows[0];
+   $id = LJCDbAccess::GetValue($row, "ID");
+   $name = LJCDbAccess::GetValue($row, "Name");
+ 
+   // result:
+   // $id = First row ID column value.
+   // $name = First row Name column value.
+ 
+   // See constructor for how to create $manager.
+   $items = new Items();
+   $item = new Item();
+   $items = $manager->CreateDataCollection($items, $item, $rows);
+   if (null == $items
+     || 0 == count($items))
+   {
+     echo("\$items was not created.");
+   }
+   else
+   {
+     $item = $items->RetrieveAtIndex(0);
+ 
+     // result:
+     // $item->ID = First item ID column value.
+     // $item->Name = First item Name column value.
+   }
  }</pre>
             </td>
           </tr>

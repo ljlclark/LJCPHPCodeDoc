@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<!-- Copyright(c) Lester J. Clark and Contributors. -->
+<!-- Licensed under the MIT License.-->
+<!-- LJCDataManagerMapNames.html -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>MapNames</title>
+  <meta charset="utf-8" />
+  <meta name="author" content="Lester J. Clark" />
+  <meta name="keywords" content="LJCCodeDoc, CodeDoc, Function, PHP" />
+  <meta name="description" content="PHP Function code documentation." />
+  <meta name="viewport" content="width=device-width" , initial-scale=1 />
+  <link rel='stylesheet' type='text/css' href='../../CSS/CodeDoc.css' />
+</head>
+<body style="background: #F0F5FF">
+  <div style="margin-left: 15px; margin-right: 10px">
+    <br />
+    <div class="PathText">
+      / <a href="../../LJCPHPCodeDoc.html#GenCodeDocLib">LJCPHPCodeDoc</a>
+      / <a href="../LJCDataManagerLib.html">LJCDataManagerLib</a>
+      / <a href="LJCDataManager.html">LJCDataManager</a>
+      / MapNames
+    </div>
+    <br />
+    <div id='Header'>
+      <div id='Title'>Function MapNames</div>
+    </div>
+    <br />
+    <div id='Title'>Parameters</div>
+    <div class='Text'>$key - The column property name.</div>
+    <div class='Text'>$propertyName - The new property name.</div>
+    <div class='Text'>$renameAs - The rename as value.</div>
+    <div class='Text'>$caption - The caption value.</div>
+    <br />
+    <div class='Text'>Syntax</div>
+    <br />
+    <div class='SectionContainer'>
+      <table class='CodeTable'>
+        <tbody>
+          <tr><th class='CodeTable'>PHP</th></tr>
+          <tr class='CodeTable'>
+            <td class='CodeTable'>
+              public function MapNames(string $key, ?string $propertyName = null<br />, ?string $renameAs = null, ?string $caption = null)
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <br />
+    <div class='Text'>
+      Sets PropertyName, RenameAs and Caption values for a schema column.
+    </div>
+    <br />
+    <div class='Text'>Example</div>
+    <br />
+    <div class='SectionContainer'>
+      <table class='CodeTable'>
+        <tbody>
+          <tr class='CodeTable'><th class='CodeTable'>PHP</th></tr>
+          <tr class='CodeTable'>
+            <td class='CodeTable'>
+              <pre style='margin-left: 2px;'>
+ // Sets PropertyName, RenameAs and Caption values for a schema column.
+ private static function MapNames(LJCDataManager $manager)
+ {
+   $methodName = "MapNames";
+ 
+   $propertyNames = [
+     "Name",
+   ];
+   // See constructor for how to create $manager.
+   $columns = $manager->Columns($propertyNames);
+   if ($columns != null
+     && count($columns) > 0)
+   {
+     // Change schema column PropertyName value.
+     // Matches by key which is the current PropertyName value.
+     $manager->MapNames("Name", "NewName", "", "Caption");
+ 
+     // Get changed column.
+     $propertyNames = [
+       "NewName",
+     ];
+     $columns = $manager->Columns($propertyNames);
+     if (null == $columns
+       || 0 == count($columns))
+     {
+       echo("{$methodName}: PropertyName change failed.");
+     }
+ 
+     // Check changes.
+     if ($columns != null
+       && count($columns) > 0)
+     {
+       // Get column by key which is the PropertyName value.
+       $column = $columns->Retrieve("NewName");
+       $result = "{$column->PropertyName},{$column->RenameAs}";
+       $result .= ",{$column->Caption}";
+ 
+       // result:
+       // NewName,,Caption
+     }
+ 
+     // Reset original column properties.
+     // Matches by key which is the current PropertyName value.
+     $manager->MapNames("NewName", "Name", "", "Caption");
+   }
+ }</pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <br />
+    <div class="SmallText">
+      Copyright &copy Lester J. Clark and Contributors.<br />
+      Licensed under the MIT License.
+    </div>
+  </div>
+</body>
+</html>
